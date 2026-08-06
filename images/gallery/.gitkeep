@@ -1,0 +1,3 @@
+Place your real gallery photos in this folder, then update the
+masonry section in index.html to point <img> tags here instead of
+the text placeholders.
