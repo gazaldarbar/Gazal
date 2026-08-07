@@ -68,6 +68,8 @@
   /* Gentle wheel navigation — releases scroll at the ends */
   var wheelCooldown = false;
   stage.addEventListener('wheel', function (e) {
+    if (e.ctrlKey) return;   /* let pinch-to-zoom pass through untouched */
+    
     var atStart = current === 0;
     var atEnd = current === total - 1;
     var forward = e.deltaY > 0 || e.deltaX > 0;
