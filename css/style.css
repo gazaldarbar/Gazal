@@ -271,16 +271,16 @@ section:nth-of-type(even){ background:var(--color-bg-soft); }
 }
 .course-card{
   background:var(--color-ivory); border-radius:6px; padding:2.4rem 1.8rem;
-  box-shadow:var(--shadow-card); position:relative; overflow:hidden;
-  transition:transform .5s var(--ease), box-shadow .5s var(--ease);
-  border:1px solid rgba(28,26,23,.05);
+  box-shadow:none; position:relative; overflow:hidden;
+  transition:transform .5s var(--ease), border-color .5s var(--ease);
+  border:1px solid #232323;
 }
 .course-card::before{
   content:''; position:absolute; inset:0; opacity:0;
   background:linear-gradient(160deg, rgba(169,124,80,.12), transparent 60%);
   transition:opacity .5s var(--ease);
 }
-.course-card:hover{ transform:translateY(-8px); box-shadow:0 30px 50px -20px rgba(28,26,23,.35); }
+.course-card:hover{ transform:translateY(-8px); border-color:#666; }
 .course-card:hover::before{ opacity:1; }
 .course-icon{
   display:inline-flex; align-items:center; justify-content:center;
@@ -309,7 +309,7 @@ section:nth-of-type(even){ background:var(--color-bg-soft); }
              radial-gradient(circle at 85% 80%, rgba(169,124,80,.14), transparent 45%);
 }
 .schedule .eyebrow{ color:var(--color-bronze-light); }
-.schedule .section-title{ color:#1C1A17; }
+.schedule .section-title{ color:#fff; }
 .schedule .section-subtitle{ color:#1C1A17; }
 .schedule-grid{
   position:relative; display:grid; grid-template-columns:repeat(4,1fr); gap:1.2rem; margin-top:3.5rem;
@@ -327,18 +327,10 @@ section:nth-of-type(even){ background:var(--color-bg-soft); }
   font-family:var(--font-accent); text-transform:uppercase; letter-spacing:.08em;
   font-size:1.05rem; font-weight:700; color:#7C5934;
 }
-.schedule-course{
-  font-family:var(--font-display); font-size:1.4rem; font-weight:700;
-  color:#1C1A17; margin-top:.6rem;
-}
+.schedule-course{ font-family:var(--font-display); font-size:1.4rem; font-weight:700; color:#fff; margin-top:.6rem; }
 .schedule-course:first-of-type{ margin-top:0; }
-.schedule-course em{
-  font-style:normal; display:block; font-size:.95rem; font-weight:700;
-  color:#1C1A17; margin-top:.2rem;
-}
-.schedule-time{
-  font-size:1.05rem; font-weight:700; color:#1C1A17;
-}
+.schedule-course em{ font-style:normal; display:block; font-size:.95rem; font-weight:700; color:#fff; margin-top:.2rem; }
+.schedule-time{ font-size:1.05rem; font-weight:700; color:#fff; }
 .schedule-card-wide{ grid-column:span 2; }
 .schedule-card-full{ grid-column:1 / -1; }
 
@@ -415,7 +407,7 @@ section:nth-of-type(even){ background:var(--color-bg-soft); }
 .testimonial-grid{ display:grid; grid-template-columns:repeat(4,1fr); gap:1.5rem; margin-top:3.5rem; }
 .testimonial-card{
   background:var(--color-ivory); border-radius:6px; padding:2.2rem 1.6rem;
-  box-shadow:var(--shadow-card); border-top:2px solid var(--color-bronze);
+  box-shadow:none; border:1px solid #232323; border-top:2px solid #fff;
   transition:transform .5s var(--ease);
 }
 .testimonial-card:hover{ transform:translateY(-6px); }
