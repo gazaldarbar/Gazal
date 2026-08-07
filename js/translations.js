@@ -73,7 +73,7 @@ const translations = {
     navSchedule: "ഷെഡ്യൂൾ", navWhyUs: "എന്തുകൊണ്ട് ഞങ്ങൾ", navGallery: "ഗാലറി",
     navTestimonials: "അഭിപ്രായങ്ങൾ", navContact: "ബന്ധപ്പെടുക", navEnroll: "ഇപ്പോൾ ചേരുക",
 
-    heroSubtitle: "സംഗീത & നൃത്ത അക്കാദമി",
+    heroSubtitle: "നൃത്ത സംഗീത ചിത്രകലാ വിദ്യാലയം",
     heroTagline1: "പാരമ്പര്യം", heroTagline2: "സർഗ്ഗാത്മകതയെ", heroTagline3: "കണ്ടുമുട്ടുന്നിടം", heroTagline4: "",
     heroCta: "കോഴ്‌സുകൾ കാണുക",
 
