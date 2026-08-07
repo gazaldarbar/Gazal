@@ -660,6 +660,10 @@ section:nth-of-type(even){ background:var(--color-bg-soft); }
   object-fit: contain;
 }
 
+.course-modal.open .course-modal-image img {
+  transform: scale(1.02);
+}
+
 /* Text area */
 .course-modal-content {
   padding: 3rem 2.5rem 3.2rem;
