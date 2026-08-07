@@ -1,7 +1,8 @@
 (function () {
   'use strict';
 
-  var currentLang = 'ml';
+  var STORAGE_KEY = 'gazalDarbarLang';
+  var currentLang = localStorage.getItem(STORAGE_KEY) || 'ml';
 
   function applyLanguage(lang) {
     currentLang = lang;
@@ -16,13 +17,16 @@
       }
     });
 
-    document.documentElement.lang = 'ml';
-    document.body.classList.add('lang-ml');
+    document.documentElement.lang = lang;
+
+    document.body.classList.toggle('lang-ml', lang === 'ml');
+
+    localStorage.setItem(STORAGE_KEY, lang);
 
     var toggleBtn = document.getElementById('langToggle');
 
     if (toggleBtn) {
-      toggleBtn.textContent = 'English';
+      toggleBtn.textContent = lang === 'ml' ? 'English' : 'മലയാളം';
     }
   }
 
@@ -30,16 +34,16 @@
 
   if (toggleBtn) {
     toggleBtn.addEventListener('click', function () {
+
       if (currentLang === 'ml') {
-        currentLang = 'en';
         applyLanguage('en');
       } else {
-        currentLang = 'ml';
         applyLanguage('ml');
       }
+
     });
   }
 
-  applyLanguage('ml');
+  applyLanguage(currentLang);
 
 })();
