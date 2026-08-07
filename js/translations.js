@@ -65,7 +65,6 @@ const translations = {
   },
 
   ml: {
-    ml: {
     langButton: "English",
     navHome: "ഹോം", navAbout: "ഞങ്ങളെക്കുറിച്ച്", navCourses: "കോഴ്‌സുകൾ",
     navHome: "ഹോം", navAbout: "ഞങ്ങളെക്കുറിച്ച്", navCourses: "കോഴ്‌സുകൾ",
