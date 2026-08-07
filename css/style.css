@@ -827,3 +827,170 @@ section:nth-of-type(even){ background:var(--color-bg-soft); }
     opacity: 0;
   }
 }
+
+/* ===========================================================
+   CINEMATIC FLYING BIRD
+   =========================================================== */
+
+.flying-bird {
+  position: fixed;
+
+  left: -180px;
+  top: 30vh;
+
+  width: 90px;
+  height: auto;
+
+  z-index: 950;
+
+  pointer-events: none;
+
+  opacity: 0;
+
+  filter:
+    drop-shadow(0 0 5px rgba(255,255,255,.18));
+
+  will-change: transform, opacity;
+
+  visibility: hidden;
+}
+
+.flying-bird svg {
+  width: 100%;
+  height: auto;
+
+  display: block;
+
+  overflow: visible;
+}
+
+/* Bird colour */
+
+.flying-bird path,
+.flying-bird circle {
+  fill: rgba(255,255,255,.82);
+}
+
+/* Wing animation */
+
+.bird-wing-left {
+  transform-origin: 82px 45px;
+  animation: bird-wing-left 0.42s ease-in-out infinite alternate;
+}
+
+.bird-wing-right {
+  transform-origin: 92px 44px;
+  animation: bird-wing-right 0.42s ease-in-out infinite alternate;
+}
+
+@keyframes bird-wing-left {
+
+  0% {
+    transform: rotate(8deg);
+  }
+
+  100% {
+    transform: rotate(-22deg);
+  }
+}
+
+@keyframes bird-wing-right {
+
+  0% {
+    transform: rotate(-8deg);
+  }
+
+  100% {
+    transform: rotate(22deg);
+  }
+}
+
+/* ===========================================================
+   BIRD FLIGHT
+   =========================================================== */
+
+.flying-bird.bird-flying {
+  visibility: visible;
+
+  animation:
+    bird-flight 11s cubic-bezier(.22,.61,.36,1) forwards;
+}
+
+@keyframes bird-flight {
+
+  0% {
+    opacity: 0;
+
+    transform:
+      translate3d(-15vw, 20vh, 0)
+      rotate(-5deg)
+      scale(.65);
+  }
+
+  8% {
+    opacity: .82;
+  }
+
+  20% {
+    transform:
+      translate3d(10vw, 5vh, 0)
+      rotate(4deg)
+      scale(.78);
+  }
+
+  38% {
+    transform:
+      translate3d(32vw, 18vh, 0)
+      rotate(-3deg)
+      scale(.9);
+  }
+
+  55% {
+    transform:
+      translate3d(54vw, -4vh, 0)
+      rotate(5deg)
+      scale(1);
+  }
+
+  72% {
+    transform:
+      translate3d(76vw, 15vh, 0)
+      rotate(-4deg)
+      scale(.92);
+  }
+
+  90% {
+    opacity: .72;
+  }
+
+  100% {
+    opacity: 0;
+
+    transform:
+      translate3d(125vw, -12vh, 0)
+      rotate(6deg)
+      scale(.72);
+  }
+}
+
+/* Mobile */
+
+@media (max-width: 600px) {
+
+  .flying-bird {
+    width: 62px;
+  }
+
+  .flying-bird.bird-flying {
+    animation-duration: 9s;
+  }
+}
+
+/* Accessibility */
+
+@media (prefers-reduced-motion: reduce) {
+
+  .flying-bird {
+    display: none;
+  }
+}
