@@ -661,15 +661,16 @@ section:nth-of-type(even){ background:var(--color-bg-soft); }
     );
 }
 
-.course-modal-image img {
+.course-modal-image {
   width: 100%;
-  height: 100%;
+  height: 220px;
+  overflow: hidden;
 
-  object-fit: cover;
-
-  display: block;
-
-  transition: transform .8s var(--ease);
+  background: linear-gradient(
+    135deg,
+    #1d1d1d,
+    #080808
+  );
 }
 
 .course-modal.open .course-modal-image img {
@@ -678,7 +679,8 @@ section:nth-of-type(even){ background:var(--color-bg-soft); }
 
 /* Text area */
 .course-modal-content {
-  padding: 2.4rem 2.5rem 2.8rem;
+  padding: 3rem 2.5rem 3.2rem;
+  min-height: 280px;
 }
 
 .course-modal-eyebrow {
