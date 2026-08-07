@@ -116,6 +116,15 @@ section:nth-of-type(even){ background:var(--color-bg-soft); }
   background:var(--grad-bronze); color:var(--color-ivory);
   box-shadow:0 10px 28px -10px rgba(122,88,52,.55);
 }
+.main-nav .btn-bronze{
+  background:#FFFFFF;
+  color:#0B0B0B;
+  border:1px solid #FFFFFF;
+}
+.main-nav .btn-bronze:hover{
+  background:transparent;
+  color:#FFFFFF;
+}
 .btn-bronze:hover{
   background:transparent; border:1px solid #fff; color:#fff;
   box-shadow:0 0 24px rgba(255,255,255,.25);
