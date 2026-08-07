@@ -516,3 +516,22 @@ section:nth-of-type(even){ background:var(--color-bg-soft); }
 #courses .section-title {
   font-size: clamp(1.5rem, 1.8vw, 1.45rem);
 }
+
+/* Hide Why Us main title in Malayalam */
+.lang-ml .why-us .section-title {
+  display: none;
+}
+
+/* ===========================================================
+   WHY GAZAL DARBAR — CUSTOM HEADING
+   =========================================================== */
+
+/* Double the eyebrow size in both languages */
+.why-us .eyebrow {
+  font-size: 1.44rem;
+}
+
+/* Remove the secondary title in Malayalam */
+.lang-ml .why-us .section-title {
+  display: none;
+}
