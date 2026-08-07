@@ -1,7 +1,7 @@
 (function () {
   'use strict';
   var STORAGE_KEY = 'gazalDarbarLang';
-  var currentLang = localStorage.getItem(STORAGE_KEY) || 'en';
+  var currentLang = localStorage.getItem(STORAGE_KEY) || 'ml';
 
   function applyLanguage(lang) {
     currentLang = lang;
