@@ -8,11 +8,11 @@
   animation:hero-rise 1s var(--ease) forwards;
 }
 .hero-title{
-  animation-name: smoke-in;
-  animation-duration: 2.2s;
-  animation-timing-function: var(--ease);
-  animation-fill-mode: forwards;
-  animation-delay: .2s;
+  animation: smoke-in 2.2s var(--ease) .2s forwards;
+  font-family: var(--font-display);
+  letter-spacing:.06em;
+  word-spacing:normal;
+  white-space:nowrap;
 }
 .hero-subtitle{ animation-delay:.46s; }
 .hero-tagline{ animation-delay:.62s; }
