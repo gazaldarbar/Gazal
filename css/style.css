@@ -27,9 +27,6 @@
   --font-malayalam-heading: 'Baloo Chettan 2', sans-serif;
   --font-malayalam-body: 'Manjari', sans-serif;
 
-  .ml-text{ font-family:var(--font-malayalam-body); }
-  .ml-heading{ font-family:var(--font-malayalam-heading); font-weight:700; }
-
   --container: 1240px;
   --gap-section: clamp(5rem, 9vw, 9rem);
   --radius: 4px;
@@ -38,6 +35,9 @@
   --shadow-soft: 0 20px 60px -20px rgba(28,26,23,.35);
   --shadow-card: 0 14px 40px -18px rgba(28,26,23,.28);
 }
+
+  .ml-text{ font-family:var(--font-malayalam-body); }
+  .ml-heading{ font-family:var(--font-malayalam-heading); font-weight:700; }
 
 /* ===========================================================
    Reset
