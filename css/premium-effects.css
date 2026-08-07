@@ -1,0 +1,134 @@
+/* =========================================================
+   1. Cinematic hero entrance — underline draw
+   ========================================================= */
+.hero-underline{
+  display:block; width:120px; height:2px; margin:1.2rem auto 0;
+  background:linear-gradient(90deg, var(--color-bronze), transparent);
+  transform:scaleX(0); transform-origin:left;
+  animation:draw-line 1s var(--ease) forwards;
+  animation-delay:1.3s;
+}
+@keyframes draw-line{ to{ transform:scaleX(1); } }
+
+.hero-logo{ animation-name: logo-slow-fade, float-soft; animation-duration:2.4s,6s; animation-timing-function:var(--ease),ease-in-out; animation-delay:0s,1.2s; animation-iteration-count:1,infinite; animation-fill-mode:forwards,none; }
+@keyframes logo-slow-fade{ from{ opacity:0; transform:translateY(-14px) scale(.96); } to{ opacity:1; transform:translateY(0) scale(1); } }
+
+.hero-title[data-split-letters] span{
+  display:inline-block; opacity:0; filter:blur(10px); transform:translateY(14px);
+  animation:letter-in .7s var(--ease) forwards;
+}
+
+/* Slow background zoom (item 1) */
+.hero{ overflow:hidden; }
+.hero-texture{ animation:hero-zoom 14s ease-in-out infinite alternate; }
+@keyframes hero-zoom{ from{ transform:scale(1); } to{ transform:scale(1.04); } }
+
+@keyframes letter-in{ to{ opacity:1; filter:blur(0); transform:translateY(0); } }
+
+/* =========================================================
+   3. Word-by-word text reveal
+   ========================================================= */
+.reveal-word{
+  display:inline-block; opacity:0; filter:blur(6px); transform:translateY(14px);
+  transition:opacity .7s var(--ease), filter .7s var(--ease), transform .7s var(--ease);
+}
+.reveal-word.in-view{ opacity:1; filter:blur(0); transform:translateY(0); }
+
+/* =========================================================
+   4. Gallery cinematic reveal + hover mask
+   ========================================================= */
+.masonry-item{
+  clip-path:inset(6% 6% 6% 6% round 6px);
+  transform:scale(.95);
+  opacity:0;
+  transition:transform 1s var(--ease), opacity 1s var(--ease), clip-path 1s var(--ease);
+}
+.masonry-item.in-view{
+  clip-path:inset(0% 0% 0% 0% round 6px);
+  transform:scale(1);
+  opacity:1;
+}
+
+/* =========================================================
+   5. Magnetic buttons (JS adds inline transform; this just eases it)
+   ========================================================= */
+.btn{ will-change:transform; }
+
+/* =========================================================
+   6. Custom cursor
+   ========================================================= */
+.custom-cursor{
+  position:fixed; top:0; left:0; width:14px; height:14px; border-radius:50%;
+  background:var(--color-bronze); pointer-events:none; z-index:9999;
+  transform:translate(-50%,-50%); transition:width .3s var(--ease), height .3s var(--ease), background .3s var(--ease);
+  display:flex; align-items:center; justify-content:center;
+  font-family:var(--font-accent); font-size:.6rem; letter-spacing:.1em; color:var(--color-charcoal);
+  mix-blend-mode:normal;
+}
+.custom-cursor.expanded{
+  width:64px; height:64px; background:rgba(169,124,80,.85); backdrop-filter:blur(4px);
+}
+@media (hover:none){ .custom-cursor{ display:none !important; } }
+
+/* =========================================================
+   7. Course card micro-interactions
+   ========================================================= */
+.course-card{ position:relative; }
+.course-card p{ transition:transform .4s var(--ease); }
+.course-card:hover p{ transform:translateX(3px); }
+.course-arrow{
+  display:inline-block; margin-top:.8rem; opacity:0; transform:translateX(-6px);
+  transition:opacity .4s var(--ease), transform .4s var(--ease); color:var(--color-bronze-deep); font-family:var(--font-accent);
+}
+.course-card:hover .course-arrow{ opacity:1; transform:translateX(0); }
+.course-card{ border:1px solid transparent; }
+.course-card:hover{ border-color:rgba(169,124,80,.4); }
+
+/* =========================================================
+   2 / 8 / Bonus — scroll-reactive waveform
+   ========================================================= */
+.waveform-bar{
+  position:fixed; left:0; right:0; bottom:0; height:34px; z-index:300;
+  pointer-events:none; opacity:.55; mix-blend-mode:multiply;
+}
+.waveform-bar svg{ width:100%; height:100%; }
+.waveform-bar path{ fill:none; stroke:var(--color-bronze); stroke-width:1.4; transition:d .6s var(--ease); }
+
+/* =========================================================
+   9. Atmospheric background — grain + floating particles
+   ========================================================= */
+.atmosphere{ position:fixed; inset:0; pointer-events:none; z-index:0; overflow:hidden; }
+.atmosphere::before{
+  content:''; position:absolute; inset:-20%;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.035'/%3E%3C/svg%3E");
+  animation:grain-drift 9s steps(6) infinite;
+}
+.atmosphere span{
+  position:absolute; width:3px; height:3px; border-radius:50%;
+  background:rgba(169,124,80,.35);
+  animation:particle-drift 18s ease-in-out infinite;
+}
+.atmosphere span:nth-child(1){ top:12%; left:8%; animation-duration:16s; }
+.atmosphere span:nth-child(2){ top:32%; left:82%; animation-duration:22s; animation-delay:-4s; }
+.atmosphere span:nth-child(3){ top:58%; left:18%; animation-duration:19s; animation-delay:-9s; }
+.atmosphere span:nth-child(4){ top:74%; left:66%; animation-duration:25s; animation-delay:-2s; }
+.atmosphere span:nth-child(5){ top:20%; left:48%; animation-duration:21s; animation-delay:-12s; }
+.atmosphere span:nth-child(6){ top:88%; left:30%; animation-duration:17s; animation-delay:-6s; }
+@keyframes grain-drift{ 0%{transform:translate(0,0);} 100%{transform:translate(-4%,3%);} }
+@keyframes particle-drift{
+  0%,100%{ transform:translate(0,0); opacity:.2; }
+  50%{ transform:translate(14px,-22px); opacity:.5; }
+}
+
+/* =========================================================
+   10. Page/section transition overlay
+   ========================================================= */
+.page-transition-overlay{
+  position:fixed; inset:0; background:var(--color-bg); z-index:9998;
+  opacity:0; visibility:hidden; pointer-events:none;
+  transition:opacity .35s var(--ease);
+  backdrop-filter:blur(0px);
+}
+.page-transition-overlay.active{
+  opacity:1; visibility:visible; backdrop-filter:blur(6px);
+  }
