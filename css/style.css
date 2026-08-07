@@ -495,11 +495,6 @@ section:nth-of-type(even){ background:var(--color-bg-soft); }
 .back-to-top.visible{ opacity:1; visibility:visible; transform:translateY(0); }
 .back-to-top:hover{ background:var(--color-charcoal); box-shadow:0 0 0 1px var(--color-bronze), 0 0 24px rgba(169,124,80,.55); }
 
-.lang-ml #about .section-title,
-.lang-ml #courses .section-title {
-  font-size: clamp(3.2rem, 7vw, 5.5rem);
-  line-height: 1.15;
-}
 
 /* Hide the two taglines under Malayalam Courses heading */
 .lang-ml #courses .eyebrow,
@@ -510,4 +505,14 @@ section:nth-of-type(even){ background:var(--color-bg-soft); }
 .lang-ml #about .eyebrow {
   font-size: 1.44rem;
   letter-spacing: .05em;
+}
+
+.lang-ml #about .section-title {
+  font-size: clamp(2.24rem, 4.9vw, 3.85rem);
+  line-height: 1.15;
+}
+
+/* Courses heading — reduced by 50% */
+#courses .section-title {
+  font-size: clamp(1.5rem, 1.8vw, 1.45rem);
 }
