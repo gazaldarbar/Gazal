@@ -24,6 +24,11 @@
   --font-display: 'Cormorant Garamond', 'Marcellus', serif;
   --font-accent: 'Marcellus', serif;
   --font-body: 'Jost', sans-serif;
+  --font-malayalam-heading: 'Baloo Chettan 2', sans-serif;
+  --font-malayalam-body: 'Manjari', sans-serif;
+
+  .ml-text{ font-family:var(--font-malayalam-body); }
+  .ml-heading{ font-family:var(--font-malayalam-heading); font-weight:700; }
 
   --container: 1240px;
   --gap-section: clamp(5rem, 9vw, 9rem);
