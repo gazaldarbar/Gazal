@@ -506,3 +506,8 @@ section:nth-of-type(even){ background:var(--color-bg-soft); }
 .lang-ml #courses .section-subtitle {
   display: none;
 }
+
+.lang-ml #about .eyebrow {
+  font-size: 1.44rem;
+  letter-spacing: .05em;
+}
