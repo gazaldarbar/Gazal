@@ -500,3 +500,9 @@ section:nth-of-type(even){ background:var(--color-bg-soft); }
   font-size: clamp(3.2rem, 7vw, 5.5rem);
   line-height: 1.15;
 }
+
+/* Hide the two taglines under Malayalam Courses heading */
+.lang-ml #courses .eyebrow,
+.lang-ml #courses .section-subtitle {
+  display: none;
+}
