@@ -67,7 +67,7 @@ const translations = {
 
   ml: {
     langButton: "English",
-    heroTitle: "ഗസൽ ദർബാർ",
+    heroTitle: "GAZAL DARBAR",
     navHome: "ഹോം", navAbout: "ഞങ്ങളെക്കുറിച്ച്", navCourses: "കോഴ്‌സുകൾ",
     navHome: "ഹോം", navAbout: "ഞങ്ങളെക്കുറിച്ച്", navCourses: "കോഴ്‌സുകൾ",
     navSchedule: "ഷെഡ്യൂൾ", navWhyUs: "എന്തുകൊണ്ട് ഞങ്ങൾ", navGallery: "ഗാലറി",
