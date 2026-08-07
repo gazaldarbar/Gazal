@@ -69,7 +69,6 @@ gracefully — animations respect `prefers-reduced-motion`, and the scroll
 reveal falls back to "always visible" if `IntersectionObserver` is
 unavailable.
 
-
 ## Credits
 
 Palette, typography and layout designed around the Gazal Darbar brand mark
