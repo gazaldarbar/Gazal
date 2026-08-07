@@ -733,3 +733,97 @@ section:nth-of-type(even){ background:var(--color-bg-soft); }
     height: 38px;
   }
 }
+
+/* ===========================================================
+   AMBIENT FLOATING PARTICLES
+   =========================================================== */
+
+.ambient-particles {
+  position: fixed;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+
+  pointer-events: none;
+  overflow: hidden;
+
+  z-index: 999;
+
+  /* keeps particles behind important UI */
+  isolation: isolate;
+}
+
+.ambient-particle {
+  position: absolute;
+
+  width: 2px;
+  height: 2px;
+
+  border-radius: 50%;
+
+  background: rgba(255, 255, 255, 0.65);
+
+  box-shadow:
+    0 0 6px rgba(255, 255, 255, 0.45);
+
+  opacity: 0;
+
+  animation:
+    particle-float var(--duration) linear infinite;
+
+  animation-delay: var(--delay);
+}
+
+@keyframes particle-float {
+
+  0% {
+    transform:
+      translate3d(0, 110vh, 0)
+      scale(0.5);
+
+    opacity: 0;
+  }
+
+  10% {
+    opacity: var(--opacity);
+  }
+
+  50% {
+    transform:
+      translate3d(var(--drift), 50vh, 0)
+      scale(1);
+  }
+
+  90% {
+    opacity: var(--opacity);
+  }
+
+  100% {
+    transform:
+      translate3d(calc(var(--drift) * -0.5), -10vh, 0)
+      scale(0.4);
+
+    opacity: 0;
+  }
+}
+
+/* Slightly smaller particles on mobile */
+@media (max-width: 600px) {
+
+  .ambient-particle {
+    width: 1.5px;
+    height: 1.5px;
+
+    box-shadow:
+      0 0 5px rgba(255, 255, 255, 0.4);
+  }
+}
+
+/* Respect reduced-motion preference */
+@media (prefers-reduced-motion: reduce) {
+
+  .ambient-particle {
+    animation: none;
+    opacity: 0;
+  }
+}
