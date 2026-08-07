@@ -490,3 +490,33 @@ section:nth-of-type(even){ background:var(--color-bg-soft); }
 }
 .back-to-top.visible{ opacity:1; visibility:visible; transform:translateY(0); }
 .back-to-top:hover{ background:var(--color-charcoal); box-shadow:0 0 0 1px var(--color-bronze), 0 0 24px rgba(169,124,80,.55); }
+
+/* ===========================================================
+   Malayalam Hero Title — keep text intact
+   =========================================================== */
+
+.lang-ml .hero-title {
+  font-family: var(--font-malayalam-heading);
+  font-weight: 700;
+  letter-spacing: 0;
+  word-spacing: 0;
+  white-space: nowrap;
+  display: block;
+}
+
+/* Prevent the letter-splitting animation from affecting
+   Malayalam characters */
+.lang-ml .hero-title span {
+  display: inline !important;
+  opacity: 1 !important;
+  transform: none !important;
+  filter: none !important;
+  animation: none !important;
+  letter-spacing: 0 !important;
+}
+
+/* Keep Malayalam vowel signs / combining marks visually connected */
+.lang-ml .hero-title {
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+}
