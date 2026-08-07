@@ -2,7 +2,7 @@
   'use strict';
 
   var STORAGE_KEY = 'gazalDarbarLang';
-  var currentLang = localStorage.getItem(STORAGE_KEY) || 'ml';
+  var currentLang = 'ml';
 
   function applyLanguage(lang) {
     currentLang = lang;
@@ -18,9 +18,9 @@
     });
 
     document.documentElement.lang = lang;
-
     document.body.classList.toggle('lang-ml', lang === 'ml');
 
+    // Save the language so the popup can detect it
     localStorage.setItem(STORAGE_KEY, lang);
 
     var toggleBtn = document.getElementById('langToggle');
@@ -44,6 +44,7 @@
     });
   }
 
-  applyLanguage(currentLang);
+  // ALWAYS OPEN WEBSITE IN MALAYALAM
+  applyLanguage('ml');
 
 })();
