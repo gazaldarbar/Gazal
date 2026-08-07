@@ -422,33 +422,30 @@
       <p class="eyebrow center">Gallery</p>
       <h2 class="section-title center">Moments from the Darbar</h2>
 
-      <div class="masonry" id="masonryGallery">
-        <button class="masonry-item span-tall reveal-on-scroll" data-caption="Bharatanatyam recital">
-          <img src="images/gallery/1Bharathanatyam.jpg" alt="Bharatanatyam recital" class="ph-block" style="object-fit:cover; height:100%; width:100%;">
-        </button>
-        <button class="masonry-item reveal-on-scroll" data-caption="Tabla practice session">
-          <img src="images/gallery/2tabla.jpg" alt="Tabla practice session" class="ph-block" style="object-fit:cover; height:100%; width:100%;">
-        </button>
-        <button class="masonry-item reveal-on-scroll" data-caption="Annual stage performance">
-          <img src="images/gallery/3stage.jpg" alt="Annual stage performance" class="ph-block" style="object-fit:cover; height:100%; width:100%;">
-        </button>
-        <button class="masonry-item span-tall reveal-on-scroll" data-caption="Keyboard classroom">
-          <img src="images/gallery/4keyboard.jpg" alt="Keyboard classroom" class="ph-block" style="object-fit:cover; height:100%; width:100%;">
-        </button>
-        <button class="masonry-item reveal-on-scroll" data-caption="Cinematic dance workshop">
-          <img src="images/gallery/5cinematicdance.jpg" alt="Cinematic dance workshop" class="ph-block" style="object-fit:cover; height:100%; width:100%;">
-        </button>
-        <button class="masonry-item span-wide reveal-on-scroll" data-caption="Carnatic vocal ensemble">
-          <img src="images/gallery/6carnatic.jpg" alt="Carnatic vocal ensemble" class="ph-block" style="object-fit:cover; height:100%; width:100%;">
-        </button>
-        <button class="masonry-item reveal-on-scroll" data-caption="Guitar one-on-one session">
-          <img src="images/gallery/7guitar.jpg" alt="Guitar one-on-one session" class="ph-block" style="object-fit:cover; height:100%; width:100%;">
-        </button>
-        <button class="masonry-item reveal-on-scroll" data-caption="Flute ensemble">
-          <img src="images/gallery/8flute.jpg" alt="Flute ensemble" class="ph-block" style="object-fit:cover; height:100%; width:100%;">
-        </button>
-      </div>
-    </div>
+      <div class="cine-gallery-wrap reveal-on-scroll">
+  <div class="cine-stage" id="cineStage" aria-label="Academy photo gallery, use arrow keys or swipe to browse">
+
+    <div class="cine-slide"><img src="images/gallery/1Bharathanatyam.jpg" alt="Bharatanatyam recital" loading="lazy"><div class="cine-caption">Bharatanatyam Recital</div></div>
+    <div class="cine-slide"><img src="images/gallery/2tabla.jpg" alt="Tabla practice session" loading="lazy"><div class="cine-caption">Tabla Practice</div></div>
+    <div class="cine-slide"><img src="images/gallery/3stage.jpg" alt="Annual stage performance" loading="lazy"><div class="cine-caption">Live Performance</div></div>
+    <div class="cine-slide"><img src="images/gallery/4keyboard.jpg" alt="Keyboard classroom" loading="lazy"><div class="cine-caption">Keyboard Classroom</div></div>
+    <div class="cine-slide"><img src="images/gallery/5cinematicdance.jpg" alt="Cinematic dance workshop" loading="lazy"><div class="cine-caption">Cinematic Dance</div></div>
+    <div class="cine-slide"><img src="images/gallery/6carnatic.jpg" alt="Carnatic vocal ensemble" loading="lazy"><div class="cine-caption">Classical Vocal Training</div></div>
+    <div class="cine-slide"><img src="images/gallery/7guitar.jpg" alt="Guitar one-on-one session" loading="lazy"><div class="cine-caption">Guitar Session</div></div>
+    <div class="cine-slide"><img src="images/gallery/8flute.jpg" alt="Flute ensemble" loading="lazy"><div class="cine-caption">Student Showcase</div></div>
+
+  </div>
+
+  <div class="cine-nav">
+    <button id="cinePrev" aria-label="Previous image">&#8592; Prev</button>
+    <span class="cine-counter" id="cineCounter">01 / 08</span>
+    <button id="cineNext" aria-label="Next image">Next &#8594;</button>
+  </div>
+
+  <div class="cine-progress" aria-hidden="true">
+    <span class="cine-progress-fill" id="cineProgressFill"></span>
+  </div>
+</div>
 
     <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-hidden="true" aria-label="Image viewer">
       <button class="lightbox-close" id="lightboxClose" aria-label="Close image viewer">&times;</button>
