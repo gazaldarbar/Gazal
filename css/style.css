@@ -145,6 +145,13 @@ section:nth-of-type(even){ background:var(--color-bg-soft); }
   transform:translateY(-2px);
 }
 .btn-small{ padding:.7rem 1.4rem; font-size:.7rem; }
+.lang-toggle{
+  background:none; border:1px solid var(--color-bronze-deep); color:var(--color-ink);
+  font-family:var(--font-accent); font-size:.72rem; letter-spacing:.08em;
+  padding:.5rem 1rem; border-radius:2px; margin-left:.8rem; cursor:pointer;
+  transition:background .3s, color .3s;
+}
+.lang-toggle:hover{ background:var(--color-bronze); color:var(--color-ivory); }
 
 .btn-ripple{ }
 .ripple{
