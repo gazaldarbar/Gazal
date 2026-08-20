@@ -107,12 +107,16 @@
     background: rgba(var(--rgb-fg), 0.08);
   }
 
-  .main-nav .btn-bronze {
-    font-size: 0.7rem !important;
-    padding: 0.45rem 0.8rem !important;
+    .main-nav .btn-bronze {
+    font-size: 0.72rem !important;
+    padding: 0.5rem 0.9rem !important;
     text-align: center;
+    color: #ffffff !important;
+    background: var(--color-bronze) !important;
     margin-top: 0.2rem;
+    border-radius: 9999px !important;
   }
+
 
   .main-nav .lang-toggle {
     font-size: 0.68rem !important;
