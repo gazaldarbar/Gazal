@@ -136,7 +136,7 @@
 @media (max-width:640px){
   :root{ --gap-section: 4rem; }
   .section-inner{ padding:0 6.5vw; }
-  .hero-logo{ width:276px; height:276px; }
+  .hero-logo{ width:92px; height:92px; }
   .hero-title{ letter-spacing:.03em; }
   .about-pillars{ grid-template-columns:1fr; }
   .course-grid{ grid-template-columns:1fr; }
