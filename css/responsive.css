@@ -48,6 +48,13 @@
   .contact-buttons .btn{ width:100%; }
   .back-to-top{ right:1.2rem; bottom:1.2rem; width:44px; height:44px; }
   .brand-sub{ display:none; }
+  /* Disable flying bird, particles, and atmosphere on mobile */
+  .flying-bird,
+  .ambient-particles,
+  .atmosphere {
+    display: none !important;
+  }
+   
 }
 
 /* ---- Small phones ---- */
