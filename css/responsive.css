@@ -136,11 +136,17 @@
 @media (max-width:640px){
   :root{ --gap-section: 4rem; }
   .section-inner{ padding:0 6.5vw; }
-    .hero-logo {
-    width: 240px !important; /* Scaled up for mobile view */
-    height: auto !important;
-    margin: 0.5rem auto 0.8rem !important;
+        .hero-content {
+      padding: 0 4vw !important;
     }
+
+    .hero-logo {
+      width: 220px !important;
+      max-width: 65vw !important;
+      height: auto !important;
+      margin: 0 auto 0.3rem !important;
+    }
+   
    
   .hero-title{ letter-spacing:.03em; }
   .about-pillars{ grid-template-columns:1fr; }
