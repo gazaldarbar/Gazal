@@ -249,14 +249,14 @@ section:nth-of-type(even){ background:var(--color-bg-soft); }
 /* Circular/Compact Emblem Pill */
 .glass-pill-btn.pill-emblem {
   padding: 0;
-  width: 42px;
-  height: 42px;
+  width: 126px;
+  height: 126px;
   border-radius: 50%;
 }
 
 .emblem-img {
-  width: 26px;
-  height: 26px;
+  width: 78px;
+  height: 78px;
   object-fit: contain;
   border-radius: 4px;
 }
