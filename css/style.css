@@ -276,9 +276,11 @@ section:nth-of-type(even){ background:var(--color-bg-soft); }
 .pill-icon {
   width: 14px;
   height: 14px;
-  stroke: var(--color-charcoal);
+  stroke: currentColor !important;
+  fill: none !important;
   flex-shrink: 0;
 }
+
 
 
 /* ===========================================================
@@ -1551,4 +1553,16 @@ html[data-theme="5"] .site-footer{
 html[data-theme="5"] .lightbox{
   --color-ivory: #B5F800;
   --rgb-cream: 181,248,0;
+}
+
+/* Ensure Enroll Now text is crisp and visible */
+.main-nav .btn-bronze,
+.btn-bronze {
+  background: var(--color-bronze) !important;
+  color: #ffffff !important; /* High-contrast solid white text */
+  font-weight: 600 !important;
+  display: inline-flex !important;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
 }
