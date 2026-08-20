@@ -54,6 +54,11 @@
   .atmosphere {
     display: none !important;
   }
+     /* Remove off-screen hero rings on mobile */
+  .hero-rings {
+    display: none !important;
+  }
+   
    
 }
 
