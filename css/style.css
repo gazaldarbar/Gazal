@@ -1555,27 +1555,60 @@ html[data-theme="5"] .lightbox{
   --rgb-cream: 181,248,0;
 }
 
-/* Dynamic Theme-reactive Action Buttons */
-.btn-bronze,
-.btn-primary,
-.main-nav .btn-bronze,
-.hero-cta .btn {
-  background: var(--color-gold) !important;
-  color: var(--color-bg) !important;
+/* ===========================================================
+   Action Buttons: Themed Styling
+   =========================================================== */
+
+/* 1. Explore Courses Button (Light Theme Background + Green Text) */
+.hero-cta .btn,
+.btn-primary {
+  background: rgba(var(--rgb-fg), 0.12) !important;
+  color: var(--color-gold) !important;
   border: 1px solid var(--color-gold) !important;
   font-weight: 700 !important;
+  border-radius: 9999px !important;
+  padding: 0.75rem 1.8rem !important;
   text-decoration: none;
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  transition: transform 0.2s var(--ease), box-shadow 0.2s var(--ease), filter 0.2s var(--ease);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  transition: transform 0.2s var(--ease), background 0.2s var(--ease), box-shadow 0.2s var(--ease);
 }
 
-.btn-bronze:hover,
-.btn-primary:hover,
-.main-nav .btn-bronze:hover,
-.hero-cta .btn:hover {
-  filter: brightness(1.1);
+.hero-cta .btn:hover,
+.btn-primary:hover {
+  background: rgba(var(--rgb-fg), 0.2) !important;
   transform: translateY(-2px);
+  box-shadow: 0 8px 20px -4px rgba(var(--rgb-shadow), 0.4);
+}
+
+/* 2. Enroll Now Button (Matches Language Switcher Pill Style) */
+.main-nav .btn-bronze,
+.btn-bronze {
+  background: rgba(var(--rgb-fg), 0.08) !important;
+  color: var(--color-charcoal) !important;
+  border: 1px solid var(--color-border) !important;
+  font-family: var(--font-accent);
+  font-size: 0.75rem !important;
+  font-weight: 600 !important;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  border-radius: 12px !important;
+  padding: 0.55rem 1rem !important;
+  text-align: center;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.2s var(--ease), border-color 0.2s var(--ease);
+}
+
+.main-nav .btn-bronze:hover,
+.btn-bronze:hover {
+  background: rgba(var(--rgb-fg), 0.15) !important;
+  border-color: var(--color-gold) !important;
+  color: var(--color-gold) !important;
 }
 
