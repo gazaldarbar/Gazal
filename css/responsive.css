@@ -106,6 +106,18 @@
     transform: scale(0.95) !important;
     opacity: 0.85 !important;
   }
+
+  .contact-map {
+    width: 100% !important;
+    min-height: 260px !important;
+    aspect-ratio: 16/10 !important;
+  }
+  .contact-map iframe {
+    width: 100% !important;
+    height: 100% !important;
+    min-height: 260px !important;
+  }
+   
    
    
    
