@@ -1555,14 +1555,27 @@ html[data-theme="5"] .lightbox{
   --rgb-cream: 181,248,0;
 }
 
-/* Ensure Enroll Now text is crisp and visible */
+/* Dynamic Theme-reactive Action Buttons */
+.btn-bronze,
+.btn-primary,
 .main-nav .btn-bronze,
-.btn-bronze {
-  background: var(--color-bronze) !important;
-  color: #ffffff !important; /* High-contrast solid white text */
-  font-weight: 600 !important;
-  display: inline-flex !important;
+.hero-cta .btn {
+  background: var(--color-gold) !important;
+  color: var(--color-bg) !important;
+  border: 1px solid var(--color-gold) !important;
+  font-weight: 700 !important;
+  text-decoration: none;
+  display: inline-flex;
   align-items: center;
   justify-content: center;
-  text-decoration: none;
+  transition: transform 0.2s var(--ease), box-shadow 0.2s var(--ease), filter 0.2s var(--ease);
 }
+
+.btn-bronze:hover,
+.btn-primary:hover,
+.main-nav .btn-bronze:hover,
+.hero-cta .btn:hover {
+  filter: brightness(1.1);
+  transform: translateY(-2px);
+}
+
