@@ -40,7 +40,30 @@
   .course-grid{ grid-template-columns:1fr; }
   .schedule-grid{ grid-template-columns:1fr; }
   .schedule-card-wide{ grid-column:span 1; }
-  .why-grid{ grid-template-columns:1fr; }
+    /* Horizontal swipe carousel for Why Us */
+  .why-grid {
+    display: flex !important;
+    overflow-x: auto !important;
+    scroll-snap-type: x mandatory;
+    gap: 1rem !important;
+    padding-bottom: 1.2rem;
+    padding-left: 0.2rem;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none; /* Hides scrollbar on Firefox */
+  }
+
+  .why-grid::-webkit-scrollbar {
+    display: none; /* Hides scrollbar on Chrome/Safari */
+  }
+
+  .why-card {
+    min-width: 80vw !important;
+    max-width: 80vw !important;
+    scroll-snap-align: center;
+    flex-shrink: 0;
+    margin: 0 !important;
+  }
+
   .testimonial-grid{ grid-template-columns:1fr; }
   .masonry{ column-count:1; }
   .footer-inner{ grid-template-columns:1fr; gap:2rem; padding-bottom:2.5rem; }
