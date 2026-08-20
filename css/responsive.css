@@ -81,6 +81,32 @@
   .hero-rings {
     display: none !important;
   }
+
+  /* Micro-tap feedback on interactive elements */
+  .btn,
+  .course-card,
+  .header-call-btn,
+  .lang-toggle,
+  .nav-toggle,
+  .cine-nav button,
+  .social-icon,
+  .back-to-top {
+    transition: transform 0.12s ease, opacity 0.12s ease !important;
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  .btn:active,
+  .course-card:active,
+  .header-call-btn:active,
+  .lang-toggle:active,
+  .nav-toggle:active,
+  .cine-nav button:active,
+  .social-icon:active,
+  .back-to-top:active {
+    transform: scale(0.95) !important;
+    opacity: 0.85 !important;
+  }
+   
    
    
 }
