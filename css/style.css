@@ -600,6 +600,16 @@ section:nth-of-type(even){ background:var(--color-bg-soft); }
   font-size: 1.44rem;
 }
 
+/* Fix Malayalam spacing on the Why Gazal Darbar heading —
+   it's the only visible heading here since the section-title
+   is hidden in Malayalam, so it needs the same treatment as
+   the About eyebrow: no wide Latin letter-spacing. */
+.lang-ml .why-us .eyebrow {
+  font-family: var(--font-malayalam-heading);
+  letter-spacing: .02em;
+  text-transform: none;
+}
+
 /* Remove the secondary title in Malayalam */
 .lang-ml .why-us .section-title {
   display: none;
