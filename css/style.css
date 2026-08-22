@@ -281,6 +281,12 @@ section:nth-of-type(even){ background:var(--color-bg-soft); }
   letter-spacing:.24em; text-transform:uppercase; color:var(--color-bronze-deep);
   margin-top:1rem;
 }
+
+.lang-ml .hero-subtitle{
+  font-family: var(--font-body);
+  letter-spacing: .02em;
+  text-transform: none;
+}
 .hero-tagline{
   margin-top:1.6rem; font-family:var(--font-display); font-style:italic;
   font-size:clamp(1.1rem,2.2vw,1.5rem); color:var(--color-ink-soft);
