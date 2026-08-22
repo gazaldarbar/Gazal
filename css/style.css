@@ -605,7 +605,7 @@ section:nth-of-type(even){ background:var(--color-bg-soft); }
    is hidden in Malayalam, so it needs the same treatment as
    the About eyebrow: no wide Latin letter-spacing. */
 .lang-ml .why-us .eyebrow {
-  font-family: var(--font-malayalam-heading);
+  font-family: var(--font-body);
   letter-spacing: .02em;
   text-transform: none;
 }
