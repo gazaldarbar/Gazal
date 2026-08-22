@@ -19,6 +19,35 @@
 @media (max-width:900px){
   .nav-toggle{ display:flex; }
   .call-toggle{ display:inline-flex; margin-left:auto; }
+   /* Liquid-glass floating pill — houses the emblem, call button, and menu icon */
+  .site-header{ background:transparent !important; box-shadow:none !important; padding:.9rem 4vw; }
+  .site-header.scrolled{ background:transparent !important; box-shadow:none !important; padding:.9rem 4vw; }
+  .header-inner{
+    gap:.5rem; padding:.5rem .5rem .5rem 1rem;
+    border-radius:999px;
+    background:
+      linear-gradient(135deg, rgba(var(--rgb-fg),.20), rgba(var(--rgb-fg),.04) 45%, rgba(var(--rgb-fg),.12) 100%),
+      rgba(var(--rgb-bg),.4);
+    backdrop-filter:blur(20px) saturate(180%);
+    -webkit-backdrop-filter:blur(20px) saturate(180%);
+    border:1px solid rgba(var(--rgb-fg),.35);
+    box-shadow:
+      0 10px 34px -12px rgba(var(--rgb-black),.45),
+      inset 0 1px 0 rgba(var(--rgb-fg),.55),
+      inset 0 -1px 0 rgba(var(--rgb-black),.18);
+  }
+  .brand-text{ display:none; }
+  .brand-mark{ width:40px; height:40px; border-radius:50%; box-shadow:0 0 0 1px rgba(var(--rgb-fg),.3); }
+  .call-toggle, .nav-toggle{
+    width:40px; height:40px; border-radius:50%; padding:0;
+    background:rgba(var(--rgb-fg),.10);
+    backdrop-filter:blur(8px);
+    -webkit-backdrop-filter:blur(8px);
+    border:1px solid rgba(var(--rgb-fg),.28);
+    box-shadow:inset 0 1px 0 rgba(var(--rgb-fg),.4);
+  }
+  .call-toggle:hover{ background:rgba(var(--rgb-fg),.22); }
+  .nav-toggle span{ width:18px; }
   .main-nav{
     position:fixed; inset:0 0 0 auto; width:min(78vw,340px); height:100vh;
     background:var(--color-bg-alt); flex-direction:column; align-items:flex-start;
