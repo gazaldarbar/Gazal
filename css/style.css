@@ -264,7 +264,7 @@ section:nth-of-type(even){ background:var(--color-bg-soft); }
 
 .hero-content{ position:relative; z-index:2; padding:0 6vw; max-width:900px; }
 .hero-logo{
-  width:120px; height:120px; object-fit:contain; margin:0 auto 1.6rem;
+  width:180px; height:180px; object-fit:contain; margin:0 auto 1.6rem;
   border-radius:14px;
   filter:drop-shadow(0 18px 30px rgba(var(--rgb-shadow),.28));
 }
