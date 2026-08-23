@@ -1445,3 +1445,139 @@ html[data-theme="5"] .lightbox{
   --color-ivory: #B5F800;
   --rgb-cream: 181,248,0;
 }
+
+/* ---------- Theme 6 — "Buttermilk / Midnight Blue" ---------- */
+html[data-theme="6"]{
+  --color-bg:             #FFF2BA;
+  --color-bg-soft:        #0F3C65;
+  --color-bg-deep:        #A69D79;
+  --color-bg-alt:         #BFB68C;
+  --color-pure-black:     #595541;
+  --color-ivory:          #E2DCB0;
+  --color-charcoal:       #0F3C65;
+  --color-charcoal-soft:  #0F3C65;
+  --color-bronze:         #0F3C65;
+  --color-bronze-light:   #0F3C65;
+  --color-bronze-deep:    #55717E;
+  --color-red:            #0F3C65;
+  --color-red-deep:       #4B6A7A;
+  --color-ink:            #0F3C65;
+  --color-ink-soft:       #55717E;
+  --color-border:         #ABB29C;
+  --color-border-strong:  #7B8E8B;
+  --color-schedule-accent:#55717E;
+  --color-modal-text-soft:#55717E;
+  --color-badge-ink:      #FFF2BA;
+  --color-scrim-text:     #FFF2BA;
+
+  --rgb-fg:        15,60,101;
+  --rgb-glow:      15,60,101;
+  --rgb-shadow:    89,85,65;
+  --rgb-cream:     15,60,101;
+  --rgb-black:     0,0,0;
+  --rgb-lightbox:  10,10,10;
+  --rgb-track:     130,130,130;
+  --rgb-bg:        255,242,186;
+  --rgb-btn-shadow:85,113,126;
+}
+
+html[data-theme="6"] section:nth-of-type(even),
+html[data-theme="6"] .course-modal {
+  --color-bg-soft:        #0F3C65;
+  --color-ivory:          #2C526F;
+  --color-charcoal:       #FFF2BA;
+  --color-charcoal-soft:  #FFF2BA;
+  --color-bronze:         #FFF2BA;
+  --color-bronze-light:   #FFF2BA;
+  --color-bronze-deep:    #9DA797;
+  --color-red:            #FFF2BA;
+  --color-red-deep:       #C3C4A5;
+  --color-ink:            #FFF2BA;
+  --color-ink-soft:       #9DA797;
+  --color-border:         #637C83;
+  --color-border-strong:  #93A094;
+  --color-schedule-accent:#9DA797;
+  --color-modal-text-soft:#9DA797;
+  --color-badge-ink:      #0F3C65;
+}
+
+html[data-theme="6"] .site-footer{
+  --grad-charcoal: linear-gradient(180deg, #54503D 0%, #0E365B 100%);
+  --color-charcoal: #FFF2BA;
+  --color-bronze-light: #FFF2BA;
+  --rgb-fg: 255,242,186;
+  --rgb-cream: 255,242,186;
+}
+
+html[data-theme="6"] .lightbox{
+  --color-ivory: #FFF2BA;
+  --rgb-cream: 255,242,186;
+}
+
+/* ---------- Theme 7 — "Teal / Mustard Yellow" ---------- */
+html[data-theme="7"]{
+  --color-bg:             #0F7476;
+  --color-bg-soft:        #DFAF34;
+  --color-bg-deep:        #0A4B4D;
+  --color-bg-alt:         #0B5758;
+  --color-pure-black:     #052929;
+  --color-ivory:          #287B6E;
+  --color-charcoal:       #FFFFFF;
+  --color-charcoal-soft:  #FFFFFF;
+  --color-bronze:         #FFFFFF;
+  --color-bronze-light:   #FFFFFF;
+  --color-bronze-deep:    #DDECEC;
+  --color-red:            #FFFFFF;
+  --color-red-deep:       #E0EDED;
+  --color-ink:            #FFFFFF;
+  --color-ink-soft:       #DDECEC;
+  --color-border:         #58895F;
+  --color-border-strong:  #819452;
+  --color-schedule-accent:#DDECEC;
+  --color-modal-text-soft:#DDECEC;
+  --color-badge-ink:      #0F7476;
+  --color-scrim-text:     #FFFFFF;
+
+  --rgb-fg:        255,255,255;
+  --rgb-glow:      255,255,255;
+  --rgb-shadow:    5,41,41;
+  --rgb-cream:     255,255,255;
+  --rgb-black:     0,0,0;
+  --rgb-lightbox:  10,10,10;
+  --rgb-track:     130,130,130;
+  --rgb-bg:        15,116,118;
+  --rgb-btn-shadow:221,236,236;
+}
+
+html[data-theme="7"] section:nth-of-type(even),
+html[data-theme="7"] .course-modal {
+  --color-bg-soft:        #DFAF34;
+  --color-ivory:          #C6A83C;
+  --color-charcoal:       #1A1A1A;
+  --color-charcoal-soft:  #1A1A1A;
+  --color-bronze:         #1A1A1A;
+  --color-bronze-light:   #1A1A1A;
+  --color-bronze-deep:    #534522;
+  --color-red:            #1A1A1A;
+  --color-red-deep:       #4B3F20;
+  --color-ink:            #1A1A1A;
+  --color-ink-soft:       #534522;
+  --color-border:         #969A4B;
+  --color-border-strong:  #6D8F58;
+  --color-schedule-accent:#534522;
+  --color-modal-text-soft:#534522;
+  --color-badge-ink:      #DFAF34;
+}
+
+html[data-theme="7"] .site-footer{
+  --grad-charcoal: linear-gradient(180deg, #0D6364 0%, #6D5619 100%);
+  --color-charcoal: #FFFFFF;
+  --color-bronze-light: #FFFFFF;
+  --rgb-fg: 255,255,255;
+  --rgb-cream: 255,255,255;
+}
+
+html[data-theme="7"] .lightbox{
+  --color-ivory: #FFFFFF;
+  --rgb-cream: 255,255,255;
+}
