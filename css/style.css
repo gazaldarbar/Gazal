@@ -262,6 +262,17 @@ section:nth-of-type(even){ background:var(--color-bg-soft); }
 }
 .hero-rings::after{ inset:190px; border-color:rgba(var(--rgb-shadow),.08); }
 
+.hero-dancer{
+  position:absolute; top:0; right:2%; bottom:0; width:48%;
+  z-index:1; pointer-events:none; opacity:.4;
+  background:var(--color-bronze);
+  -webkit-mask-image:url('images/dancer-silhouette.png');
+  mask-image:url('images/dancer-silhouette.png');
+  -webkit-mask-repeat:no-repeat; mask-repeat:no-repeat;
+  -webkit-mask-position:center bottom; mask-position:center bottom;
+  -webkit-mask-size:contain; mask-size:contain;
+}
+
 .hero-content{ position:relative; z-index:2; padding:0 6vw; max-width:900px; }
 .hero-logo{
   width:180px; height:180px; object-fit:contain; margin:0 auto 1.6rem;
