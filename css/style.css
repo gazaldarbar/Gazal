@@ -1613,3 +1613,10 @@ html[data-theme="7"] .lightbox{
   --color-ivory: #FFFFFF;
   --rgb-cream: 255,255,255;
 }
+/* TEMPORARY HERO BLACK ELEMENT TEST */
+.hero-dancer,
+.hero-texture,
+.hero-rings {
+  background: transparent !important;
+  box-shadow: none !important;
+}
