@@ -31,11 +31,19 @@
 @keyframes smoke-in{
   0%{
     opacity:0;
+    filter:blur(18px);
     transform:translateY(10px) scale(1.04);
+    letter-spacing:.15em;
+  }
+  60%{
+    opacity:1;
+    filter:blur(4px);
   }
   100%{
     opacity:1;
+    filter:blur(0);
     transform:translateY(0) scale(1);
+    letter-spacing:.06em;
   }
 }
 
