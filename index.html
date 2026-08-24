@@ -61,7 +61,14 @@
 <link rel="stylesheet" href="css/animations.css">
 <link rel="stylesheet" href="css/responsive.css">
 <link rel="stylesheet" href="css/premium-effects.css">
-<link rel="stylesheet" href="css/cinematic-gallery.css">
+<link rel="preload"
+      href="css/cinematic-gallery.css"
+      as="style"
+      onload="this.onload=null;this.rel='stylesheet'">
+
+<noscript>
+  <link rel="stylesheet" href="css/cinematic-gallery.css">
+</noscript>
 
 <!-- Schema.org -->
 <script type="application/ld+json">
