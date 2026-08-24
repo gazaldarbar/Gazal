@@ -7,6 +7,7 @@ const translations = {
     navTestimonials: "Testimonials", navContact: "Contact", navEnroll: "Enroll Now",
 
     heroSubtitle: "Music & Dance Academy",
+    heroLocation: "Thazhe Chelari, Malappuram",
     heroTagline1: "Where", heroTagline2: "Tradition", heroTagline3: "Meets", heroTagline4: "Creativity",
     heroCta: "Explore Courses",
 
@@ -74,6 +75,7 @@ const translations = {
     navTestimonials: "അഭിപ്രായങ്ങൾ", navContact: "ബന്ധപ്പെടുക", navEnroll: "ഇപ്പോൾ ചേരുക",
 
     heroSubtitle: "നൃത്ത സംഗീത ചിത്രകലാ വിദ്യാലയം",
+    heroLocation: "താഴേ ചേളാരി, മലപ്പുറം",
     heroTagline1: "പാരമ്പര്യം", heroTagline2: "സർഗ്ഗാത്മകതയെ", heroTagline3: "കണ്ടുമുട്ടുന്നിടം", heroTagline4: "",
     heroCta: "കോഴ്‌സുകൾ",
 
