@@ -93,7 +93,7 @@
   }
   .why-grid::-webkit-scrollbar{ display:none; }
   .why-card{ scroll-snap-align:center; flex:0 0 82%; }
-  .stats-grid{ grid-template-columns:repeat(2,1fr); gap:1.8rem 1rem; }
+  .stats-grid{ grid-template-columns:repeat(2,1fr); gap:.9rem .5rem; }
   .sound-divider{ height:32px; gap:3px; }
   .sound-divider span{ width:2px; }
   
