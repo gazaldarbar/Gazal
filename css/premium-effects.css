@@ -29,7 +29,9 @@
 
 /* Slow background zoom (item 1) */
 .hero{ overflow:hidden; }
-.hero-texture{ animation:hero-zoom 14s ease-in-out infinite alternate; }
+.hero-texture{
+  animation:none;
+}
 @keyframes hero-zoom{ from{ transform:scale(1); } to{ transform:scale(1.04); } }
 
 @keyframes letter-in{
