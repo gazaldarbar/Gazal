@@ -14,7 +14,9 @@
 @keyframes logo-slow-fade{ from{ opacity:0; transform:translateY(-14px) scale(.96); } to{ opacity:1; transform:translateY(0) scale(1); } }
 
 .hero-title[data-split-letters] span{
-  display:inline-block; opacity:0; filter:blur(10px); transform:translateY(14px);
+  display:inline-block;
+  opacity:0;
+  transform:translateY(14px);
   animation:letter-in .7s var(--ease) forwards;
 }
 
@@ -23,7 +25,12 @@
 .hero-texture{ animation:hero-zoom 14s ease-in-out infinite alternate; }
 @keyframes hero-zoom{ from{ transform:scale(1); } to{ transform:scale(1.04); } }
 
-@keyframes letter-in{ to{ opacity:1; filter:blur(0); transform:translateY(0); } }
+@keyframes letter-in{
+  to{
+    opacity:1;
+    transform:translateY(0);
+  }
+}
 
 /* =========================================================
    3. Word-by-word text reveal
