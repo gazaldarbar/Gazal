@@ -266,8 +266,8 @@ section:nth-of-type(even){ background:var(--color-bg-soft); }
   position:absolute; top:0; right:2%; bottom:0; width:48%;
   z-index:1; pointer-events:none; opacity:.4;
   background:var(--color-bronze);
-  -webkit-mask-image:url('images/dancer-silhouette.png');
-  mask-image:url('images/dancer-silhouette.png');
+  -webkit-mask-image:url('../images/dancer-silhouette.png');
+  mask-image:url('../images/dancer-silhouette.png');
   -webkit-mask-repeat:no-repeat; mask-repeat:no-repeat;
   -webkit-mask-position:center bottom; mask-position:center bottom;
   -webkit-mask-size:contain; mask-size:contain;
