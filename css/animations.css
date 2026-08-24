@@ -15,7 +15,13 @@
   white-space:nowrap;
 }
 .hero-subtitle{ animation-delay:.46s; }
-.hero-location{ animation-delay:.62s; }
+
+.hero-location{
+  opacity:0;
+  transform:translateY(28px);
+  animation:hero-rise 1s var(--ease) .62s forwards;
+}
+
 .hero-tagline{ animation-delay:.62s; }
 .hero-cta{ animation-delay:.82s; }
 
