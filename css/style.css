@@ -341,7 +341,9 @@ section:nth-of-type(even){ background:var(--color-bg-soft); }
 .about-grid{ display:grid; grid-template-columns:.85fr 1.15fr; gap:clamp(2.5rem,5vw,5rem); align-items:center; }
 .about-image-frame{ position:relative; }
 .about-image-placeholder{
-  aspect-ratio:4/5; border-radius:6px; object-fit:cover;
+  aspect-ratio:1/1;
+  border-radius:6px;
+  object-fit:contain;
   box-shadow:var(--shadow-soft);
 }
 .about-frame-accent{
