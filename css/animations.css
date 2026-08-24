@@ -8,7 +8,7 @@
   animation:hero-rise 1s var(--ease) forwards;
 }
 .hero-title{
-  animation:none;
+  animation: smoke-in 2.2s var(--ease) .2s forwards;
   font-family: var(--font-display);
   letter-spacing:.06em;
   word-spacing:normal;
