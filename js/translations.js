@@ -12,7 +12,7 @@ const translations = {
     heroCta: "Explore Courses",
 
     aboutEyebrow: "About the Academy",
-    aboutLead: "Founded 15 years ago, Gazal Darbar was built on a simple belief that classical discipline and modern creativity are not opposites, but partners. Based in Chelari, Malappuram, our academy brings together the ragas of Hindustani and Carnatic tradition, the melody of Harmonium with the rhythm of Tabla, and the grace of classical dances like Bharatanatyam, Mohiniyattam, alongside the contemporary language of guitar, keyboard, cinematic dance and drawing.",
+    aboutLead: "Founded 15 years ago, Gazal Darbar is a music and dance academy in Thazhe Chelari, Malappuram, Kerala, where traditional Indian arts meet modern creativity. We offer training in Hindustani Music, Carnatic Music, Mappilapattu, Classical Dance, Cinematic Dance, Tabla, Guitar, Keyboard, Harmonium, Flute, Violin, Triple Drums and Drawing. Our academy is dedicated to helping students learn with discipline, personal attention and a passion for the arts.",
     missionTitle: "Mission", missionText: "To nurture every student's artistic voice through disciplined training, individual attention and a genuine love for the craft.",
     visionTitle: "Vision", visionText: "To become the region's most trusted address for classical and contemporary arts education, honoured for both technique and soul.",
     valuesTitle: "Values", valuesText: "Discipline, authenticity, warmth and the belief that every student deserves a stage.",
@@ -80,11 +80,7 @@ const translations = {
     heroCta: "കോഴ്‌സുകൾ",
 
     aboutEyebrow: "അക്കാദമിയെക്കുറിച്ച്",
-    aboutLead: `15 വർഷങ്ങൾക്ക് മുമ്പ് സ്ഥാപിതമായ ഗസൽ ദർബാർ, ശാസ്ത്രീയമായ അച്ചടക്കവും ആധുനികമായ സർഗാത്മകതയും പരസ്പര വിരുദ്ധങ്ങളല്ല, മറിച്ച് പരസ്പരം പൂരകങ്ങളാണെന്ന വിശ്വാസത്തിലാണ് രൂപം കൊണ്ടത്.
-
-മലപ്പുറം ചെളാരിയിൽ പ്രവർത്തിക്കുന്ന ഞങ്ങളുടെ അക്കാദമിയിൽ, ഹിന്ദുസ്ഥാനി, കർണാടക സംഗീത പാരമ്പര്യങ്ങളിലെ രാഗഭാവങ്ങൾക്കൊപ്പം ഹാർമോണിയത്തിന്റെ മാധുര്യവും തബലയുടെ താളവൈഭവവും അഭ്യസിക്കാം. ഭരതനാട്യം, മോഹിനിയാട്ടം തുടങ്ങിയ ശാസ്ത്രീയ നൃത്തരൂപങ്ങളുടെ സൗന്ദര്യത്തോടൊപ്പം ഗിറ്റാർ, കീബോർഡ്, സിനിമാറ്റിക് ഡാൻസ്, ഡ്രോയിംഗ് തുടങ്ങിയ സമകാലിക കലാരൂപങ്ങളും ഇവിടെ ഒരേ വേദിയിൽ സംഗമിക്കുന്നു.
-
-പാരമ്പര്യത്തിന്റെ ആഴവും പുതുമയുടെ ഭാവനയും ഒരുമിക്കുന്ന ഈ കലാവേദി, ഓരോ വിദ്യാർത്ഥിക്കും സ്വന്തം കഴിവുകൾ കണ്ടെത്താനും വികസിപ്പിക്കാനും സർഗാത്മകമായി വളരാനും അവസരമൊരുക്കുന്നു.`,
+    aboutLead: `15 വർഷമായി പ്രവർത്തിക്കുന്ന ഗസൽ ദർബാർ, കേരളത്തിലെ മലപ്പുറം താഴേ ചേളാരിയിൽ പ്രവർത്തിക്കുന്ന ഒരു സംഗീത-നൃത്ത അക്കാദമിയാണ്. പാരമ്പര്യ ഇന്ത്യൻ കലകളെയും ആധുനിക സർഗാത്മകതയെയും ഒരുമിച്ച് കൊണ്ടുവരുന്ന ഞങ്ങളുടെ അക്കാദമിയിൽ ഹിന്ദുസ്ഥാനി സംഗീതം, കർണാടക സംഗീതം, മാപ്പിളപ്പാട്ട്, ക്ലാസിക്കൽ ഡാൻസ്, സിനിമാറ്റിക് ഡാൻസ്, തബല, ഗിറ്റാർ, കീബോർഡ്, ഹാർമോണിയം, ഫ്ലൂട്ട്, വയലിൻ, ട്രിപ്പിൾ ഡ്രംസ്, ഡ്രോയിംഗ് എന്നിവയിൽ പരിശീലനം നൽകുന്നു. അച്ചടക്കം, വ്യക്തിഗത ശ്രദ്ധ, കലകളോടുള്ള താൽപ്പര്യം എന്നിവയിലൂടെ വിദ്യാർത്ഥികളെ വളർത്തിയെടുക്കുകയാണ് ഞങ്ങളുടെ ലക്ഷ്യം.`,
     missionTitle: "ദൗത്യം", missionText: "ഓരോ വിദ്യാർത്ഥിയുടെയും കലാപരമായ കഴിവുകളെ അച്ചടക്കത്തോടെയുള്ള പരിശീലനത്തിലൂടെയും വ്യക്തിഗത ശ്രദ്ധയിലൂടെയും കലയോടുള്ള ആത്മാർത്ഥമായ സ്നേഹത്തിലൂടെയും പരിപോഷിപ്പിക്കുക.",
     visionTitle: "കാഴ്ചപ്പാട്", visionText: "ശാസ്ത്രീയവും സമകാലികവുമായ കലാപഠനത്തിന് മികവിന്റെയും ആത്മാർത്ഥതയുടെയും വിശ്വാസ്യതയുടെയും പ്രതീകമായി ഈ മേഖലയിലെ ഏറ്റവും മികച്ച കലാ അക്കാദമിയായി വളരുക.",
     valuesTitle: "മൂല്യങ്ങൾ", valuesText: "അച്ചടക്കം, ആധികാരികത, ആത്മാർത്ഥത, സൗഹൃദം — ഓരോ വിദ്യാർത്ഥിക്കും സ്വന്തം കഴിവുകൾ പ്രകടിപ്പിക്കാൻ ഒരു വേദി ലഭിക്കണമെന്ന വിശ്വാസം.",
