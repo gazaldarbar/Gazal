@@ -21,20 +21,46 @@ const translations = {
     coursesTitle: "Every Instrument. Every Tradition.",
     coursesSubtitle: "Thirteen disciplines, one philosophy — learn with intention.",
 
-    course1Title: "Hindustani Music", course1Desc: "Master the ragas and taals of North Indian classical vocal tradition through guided riyaz.",
-    course2Title: "Carnatic Music", course2Desc: "Explore the intricate kritis and swaras of South Indian classical vocal music.",
-    course3Title: "Mappilapattu", course3Desc: "Sing the soulful folk heritage of Malabar — melodies passed down through generations.",
-    course4Title: "Classical Dances", course4Desc: "Bharatanatyam, Mohiniyattam and Kuchipudi — three traditions of grace, rhythm and storytelling.",
-    course5Title: "Cinematic Dance", course5Desc: "Contemporary choreography inspired by film — energy, expression and stage presence.",
-    course6Title: "Tabla", course6Desc: "Build rhythmic precision and hand technique on one of India's most expressive percussion instruments.",
-    course7Title: "Guitar", course7Desc: "Acoustic and electric technique, chords to lead — for every style and skill level.",
-    course8Title: "Keyboard", course8Desc: "From foundational theory to expressive performance, build fluency across genres.",
-    course9Title: "Harmonium", course9Desc: "Learn the bellows-driven heart of Hindustani accompaniment, blending breath and keys.",
-    course10Title: "Flute", course10Desc: "Learn breath control and melodic phrasing on the timeless bansuri and Western flute.",
-    course11Title: "Violin", course11Desc: "Develop bowing control and intonation on one of the most expressive string instruments.",
-    course12Title: "Triple Drums", course12Desc: "Train coordination and power across a three-drum set, driving rhythm for any performance.",
-    course13Title: "Drawing", course13Desc: "Sharpen observation and technique — sketching, shading and composition for young artists.",
-    courseLearnMore: "Learn more →",
+course1Title: "Hindustani Music",
+course1Desc: "Learn Hindustani classical vocal music in Thazhe Chelari, Malappuram, with guided training in ragas, taals, voice culture and regular riyaz practice.",
+
+course2Title: "Carnatic Music",
+course2Desc: "Learn Carnatic classical vocal music in Thazhe Chelari, Malappuram, with structured training in swaras, kritis, rhythm and traditional South Indian music.",
+
+course3Title: "Mappilapattu",
+course3Desc: "Learn Mappilapattu in Thazhe Chelari, Malappuram, and explore the soulful folk music traditions of Malabar through guided vocal training and practice.",
+
+course4Title: "Classical Dance",
+course4Desc: "Learn Bharatanatyam, Mohiniyattam and Kuchipudi in Thazhe Chelari, Malappuram, with training in rhythm, expressions, technique and traditional storytelling.",
+
+course5Title: "Cinematic Dances",
+course5Desc: "Learn cinematic dance in Thazhe Chelari, Malappuram, with training in choreography, expressions, movement, stage presence and performance skills.",
+
+course6Title: "Tabla",
+course6Desc: "Learn Tabla in Thazhe Chelari, Malappuram, with structured training in rhythm, hand technique, taals and traditional Indian percussion.",
+
+course7Title: "Guitar",
+course7Desc: "Learn guitar in Thazhe Chelari, Malappuram, with training in chords, strumming, scales, lead playing and performance for different musical styles.",
+
+course8Title: "Keyboard",
+course8Desc: "Learn keyboard in Thazhe Chelari, Malappuram, with structured training in music theory, chords, scales, rhythm and performance across different genres.",
+
+course9Title: "Harmonium",
+course9Desc: "Learn harmonium in Thazhe Chelari, Malappuram, with guided training in keyboard technique, melody, rhythm and traditional Indian musical accompaniment.",
+
+course10Title: "Flute",
+course10Desc: "Learn flute in Thazhe Chelari, Malappuram, with guided training in breath control, fingering, scales, melody and expressive performance on bansuri and Western flute.",
+
+course11Title: "Violin",
+course11Desc: "Learn violin in Thazhe Chelari, Malappuram, with structured training in bowing, fingering, intonation, scales and expressive performance.",
+
+course12Title: "Triple Drums",
+course12Desc: "Learn Triple Drums in Thazhe Chelari, Malappuram, with training in rhythm, coordination, hand technique and powerful three-drum performance.",
+
+course13Title: "Drawing",
+course13Desc: "Learn drawing in Thazhe Chelari, Malappuram, with guided training in sketching, shading, observation, composition and creative art techniques.",
+
+courseLearnMore: "Learn more →",
 
     scheduleEyebrow: "Weekly Rhythm",
     scheduleTitle: "Class Schedule",
