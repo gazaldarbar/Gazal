@@ -10,7 +10,9 @@
 }
 @keyframes draw-line{ to{ transform:scaleX(1); } }
 
-.hero-logo{ animation-name: logo-slow-fade, float-soft; animation-duration:2.4s,6s; animation-timing-function:var(--ease),ease-in-out; animation-delay:0s,1.2s; animation-iteration-count:1,infinite; animation-fill-mode:forwards,none; }
+.hero-logo{
+  animation:logo-slow-fade 2.4s var(--ease) forwards;
+}
 @keyframes logo-slow-fade{ from{ opacity:0; transform:translateY(-14px) scale(.96); } to{ opacity:1; transform:translateY(0) scale(1); } }
 
 .hero-title[data-split-letters] span{
