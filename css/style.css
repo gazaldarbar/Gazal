@@ -580,7 +580,7 @@ section:nth-of-type(even){ background:var(--color-bg-soft); }
 .footer-brand .brand-name{ color:var(--color-charcoal); font-size:1.4rem; }
 .footer-brand p{ margin-top:.6rem; color:var(--color-bronze-light); font-family:var(--font-display); font-style:italic; }
 .footer-links, .footer-contact, .footer-social{ display:flex; flex-direction:column; gap:.7rem; }
-.footer-links h4, .footer-contact h4, .footer-social h4{
+.footer-links h2, .footer-contact h2, .footer-social h2{
   color:var(--color-charcoal); font-family:var(--font-accent); text-transform:uppercase;
   letter-spacing:.1em; font-size:.75rem; margin-bottom:.4rem;
 }
