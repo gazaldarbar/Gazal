@@ -434,9 +434,6 @@ section:nth-of-type(even){ background:var(--color-bg-soft); }
 }
 
 
-
-
-
 /* ===========================================================
    Why Us
    =========================================================== */
@@ -504,21 +501,7 @@ section:nth-of-type(even){ background:var(--color-bg-soft); }
 }
 .lightbox-nav:hover{ background:var(--color-bronze); border-color:var(--color-bronze); }
 
-/* ===========================================================
-   Testimonials
-   =========================================================== */
-.testimonial-grid{ display:grid; grid-template-columns:repeat(4,1fr); gap:1.5rem; margin-top:3.5rem; }
-.testimonial-card{
-  background:var(--color-ivory); border-radius:6px; padding:2.2rem 1.6rem;
-  box-shadow:none; border:1px solid var(--color-border); border-top:2px solid var(--color-charcoal);
-  transition:transform .5s var(--ease);
-}
-.testimonial-card:hover{ transform:translateY(-6px); }
-.stars{ color:var(--color-bronze); letter-spacing:.15em; margin-bottom:1rem; }
-.testimonial-card blockquote{
-  margin:0; font-family:var(--font-display); font-style:italic; font-size:1rem; color:var(--color-ink);
-}
-.testimonial-card figcaption{ margin-top:1.2rem; font-size:.78rem; color:var(--color-ink); letter-spacing:.04em; }
+
 /* ===========================================================
    Contact
    =========================================================== */
