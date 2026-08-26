@@ -19,6 +19,7 @@
 @media (max-width:900px){
   .nav-toggle{ display:flex; }
   .call-toggle{ display:inline-flex; margin-left:auto; }
+  .folder-grid{ grid-template-columns:repeat(2,1fr); gap:1.3rem; }
 
    
 /* Liquid-glass floating pill — emblem, brand name, call button, menu icon */
@@ -94,6 +95,8 @@
   .why-grid::-webkit-scrollbar{ display:none; }
   .why-card{ scroll-snap-align:center; flex:0 0 82%; }
   .stats-grid{ grid-template-columns:repeat(2,1fr); gap:.9rem .5rem; }
+  .folder-grid{ grid-template-columns:1fr; gap:1.6rem; }
+  .folder-card-visual{ margin-bottom:16px; }
   .sound-divider{ height:32px; gap:3px; }
   .sound-divider span{ width:2px; }
   
