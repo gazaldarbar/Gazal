@@ -61,14 +61,7 @@
 <link rel="stylesheet" href="css/animations.css">
 <link rel="stylesheet" href="css/responsive.css">
 <link rel="stylesheet" href="css/premium-effects.css">
-<link rel="preload"
-      href="css/cinematic-gallery.css"
-      as="style"
-      onload="this.onload=null;this.rel='stylesheet'">
 
-<noscript>
-  <link rel="stylesheet" href="css/cinematic-gallery.css">
-</noscript>
 
 <!-- Schema.org -->
 <script type="application/ld+json">
@@ -447,87 +440,25 @@
       <p class="eyebrow center">Gallery</p>
       <h2 class="section-title center">Moments from the Darbar</h2>
 
-      <div class="cine-gallery-wrap reveal-on-scroll">
-  <div class="cine-stage" id="cineStage" aria-label="Academy photo gallery, use arrow keys or swipe to browse">
-
-    <div class="cine-slide">
-  <img src="images/gallery/1Bharathanatyam.jpg"
-       alt="Bharatanatyam recital at Gazal Darbar"
-       loading="lazy">
-  <div class="cine-caption">Bharatanatyam Recital</div>
-</div>
-
-<div class="cine-slide">
-  <img src="images/gallery/2tabla.jpg"
-       alt="Tabla practice session at Gazal Darbar"
-       loading="lazy">
-  <div class="cine-caption">Tabla Practice</div>
-</div>
-
-<div class="cine-slide">
-  <img src="images/gallery/3stage.jpg"
-       alt="Students performing on stage at Gazal Darbar"
-       loading="lazy">
-  <div class="cine-caption">Live Performance</div>
-</div>
-
-<div class="cine-slide">
-  <img src="images/gallery/4keyboard.jpg"
-       alt="Keyboard class at Gazal Darbar"
-       loading="lazy">
-  <div class="cine-caption">Keyboard Classroom</div>
-</div>
-
-<div class="cine-slide">
-  <img src="images/gallery/5cinematicdance.jpg"
-       alt="Cinematic dance workshop at Gazal Darbar"
-       loading="lazy">
-  <div class="cine-caption">Cinematic Dance</div>
-</div>
-
-<div class="cine-slide">
-  <img src="images/gallery/6carnatic.jpg"
-       alt="Carnatic vocal training at Gazal Darbar"
-       loading="lazy">
-  <div class="cine-caption">Classical Vocal Training</div>
-</div>
-
-<div class="cine-slide">
-  <img src="images/gallery/7guitar.jpg"
-       alt="Guitar training session at Gazal Darbar"
-       loading="lazy">
-  <div class="cine-caption">Guitar Session</div>
-</div>
-
-<div class="cine-slide">
-  <img src="images/gallery/8flute.jpg"
-       alt="Flute student performance at Gazal Darbar"
-       loading="lazy">
-  <div class="cine-caption">Student Showcase</div>
-</div>
-  </div>
-
-  <div class="cine-nav">
-    <button id="cinePrev" aria-label="Previous image">&#8592; Prev</button>
-    <span class="cine-counter" id="cineCounter">01 / 08</span>
-    <button id="cineNext" aria-label="Next image">Next &#8594;</button>
-  </div>
-
-  <div class="cine-progress" aria-hidden="true">
-    <span class="cine-progress-fill" id="cineProgressFill"></span>
-  </div>
-</div>
-
-    <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-hidden="true" aria-label="Image viewer">
-      <button class="lightbox-close" id="lightboxClose" aria-label="Close image viewer">&times;</button>
-      <button class="lightbox-nav lightbox-prev" id="lightboxPrev" aria-label="Previous image">&#8249;</button>
-      <div class="lightbox-content">
-        <div class="lightbox-image ph-block" id="lightboxImage">Gallery Image</div>
-        <p class="lightbox-caption" id="lightboxCaption"></p>
-      </div>
-      <button class="lightbox-nav lightbox-next" id="lightboxNext" aria-label="Next image">&#8250;</button>
+      <div class="folder-grid" id="folderGrid"></div>
     </div>
   </section>
+
+  <div class="folder-modal" id="folderModal" role="dialog" aria-modal="true" aria-label="Gallery image viewer" hidden>
+    <div class="folder-modal-backdrop" data-close></div>
+    <div class="folder-modal-box">
+      <button class="folder-modal-close" data-close aria-label="Close gallery viewer">&times;</button>
+      <div class="folder-modal-header">
+        <h3 class="folder-modal-title" id="folderModalTitle"></h3>
+        <span class="folder-modal-counter" id="folderModalCounter"></span>
+      </div>
+      <div class="folder-modal-stage">
+        <button class="folder-modal-nav prev" id="folderPrev" aria-label="Previous image">&#8249;</button>
+        <img class="folder-modal-image" id="folderModalImage" src="" alt="">
+        <button class="folder-modal-nav next" id="folderNext" aria-label="Next image">&#8250;</button>
+      </div>
+    </div>
+  </div>
 
   <!-- ============ CONTACT ============ -->
   <section class="contact" id="contact">
@@ -628,7 +559,7 @@
 <script src="js/gallery.js"></script>
 <script src="js/main.js"></script>
 <script src="js/premium-effects.js"></script>
-<script src="js/cinematic-gallery.js"></script>
+<script src="js/gallery-folders.js"></script>
 <script src="js/course-popup.js"></script>
 <script src="js/particles.js"></script>
 <script>
