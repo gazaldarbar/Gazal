@@ -114,3 +114,63 @@
   .hero-title{ font-size:2.2rem; }
   .brand-mark{ width:36px; height:36px; }
 }
+
+
+/* ===========================================================
+   Gallery Folders — Compact Mobile Layout
+   =========================================================== */
+
+@media (max-width: 768px){
+
+  .folder-grid{
+    grid-template-columns:repeat(2, minmax(0, 1fr));
+    gap:1.1rem;
+    margin-top:2rem;
+  }
+
+  .folder-card-visual{
+    aspect-ratio:1.15 / 1;
+    margin-bottom:9px;
+  }
+
+  .folder-preview-img{
+    top:5%;
+    left:13%;
+    width:74%;
+    height:57%;
+    border-radius:6px;
+  }
+
+  .folder-shape{
+    height:66%;
+    border-radius:4px 13px 13px 13px;
+  }
+
+  .folder-shape::before{
+    top:-10px;
+    width:38%;
+    height:11px;
+    border-radius:6px 6px 0 0;
+  }
+
+  .folder-card-info{
+    flex-direction:column;
+    align-items:flex-start;
+    gap:2px;
+  }
+
+  .folder-card-name{
+    font-size:.92rem;
+    line-height:1.2;
+  }
+
+  .folder-card-count{
+    font-size:.58rem;
+    letter-spacing:.06em;
+  }
+
+  .folder-card:hover .folder-preview-img,
+  .folder-card:hover .folder-shape{
+    transform:none;
+  }
+}
