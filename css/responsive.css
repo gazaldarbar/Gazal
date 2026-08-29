@@ -111,21 +111,84 @@
   .brand-mark{ width:36px; height:36px; }
 }
 
-
 /* ===========================================================
-   Gallery Folders — Compact Mobile Layout
+   GALLERY FOLDERS — COMPACT MOBILE LAYOUT
    =========================================================== */
 
-@media (max-width: 768px){
-  .folder-grid{ grid-template-columns:repeat(2, minmax(0,1fr)); gap:1.6rem 1rem; margin-top:2rem; }
-  .story-photo{ border-radius:10px; }
-  .story-glass{ padding:.75rem .8rem 2.1rem; border-radius:12px; }
-  .story-track .t-title{ font-size:.72rem; }
-  .story-track .t-sub{ font-size:.6rem; }
-  .story-icon{ width:30px; height:30px; }
-  .story-credit{ font-size:.55rem; }
-  .story-title{ font-size:1rem; }
-  .story-pill{ font-size:.62rem; padding:.3rem .8rem; }
-  .story-card:hover .story-photo.p3{ transform:translate(-78%,4%) rotate(-11deg); }
-  .story-card:hover .story-photo.p1{ transform:translate(-22%,4%) rotate(11deg); }
+@media (max-width:768px){
+
+  .folder-grid{
+    grid-template-columns:repeat(2, minmax(0, 1fr));
+    gap:1.5rem .9rem;
+    margin-top:2rem;
+  }
+
+  .story-stack{
+    aspect-ratio:1.18 / 1;
+    margin-bottom:.8rem;
+  }
+
+  /* Smaller photos for elegant mobile folders */
+  .story-photo{
+    width:58%;
+    height:68%;
+    border-radius:11px 11px 5px 5px;
+  }
+
+  .story-photo.p3{
+    transform:translate(-88%, 7%) rotate(-8deg);
+  }
+
+  .story-photo.p2{
+    transform:translate(-50%, 0) rotate(0deg);
+  }
+
+  .story-photo.p1{
+    transform:translate(-12%, 7%) rotate(8deg);
+  }
+
+  /* Compact folder body */
+  .story-glass{
+    left:4%;
+    right:4%;
+    bottom:3%;
+    height:50%;
+    border-radius:17px;
+
+    backdrop-filter:blur(18px) saturate(140%);
+    -webkit-backdrop-filter:blur(18px) saturate(140%);
+  }
+
+  /* Smaller folder tab */
+  .story-glass::before{
+    top:-12px;
+    width:46%;
+    height:19px;
+    border-radius:15px 15px 0 0;
+  }
+
+  /* Remove desktop hover movement on touch devices */
+  .story-card:hover .story-photo.p3{
+    transform:translate(-88%, 7%) rotate(-8deg);
+  }
+
+  .story-card:hover .story-photo.p2{
+    transform:translate(-50%, 0) rotate(0deg);
+  }
+
+  .story-card:hover .story-photo.p1{
+    transform:translate(-12%, 7%) rotate(8deg);
+  }
+
+  .story-card:hover .story-glass{
+    transform:none;
+  }
+
+  .story-title{
+    font-size:.9rem;
+  }
+
+  .story-pill{
+    font-size:.58rem;
+  }
 }
