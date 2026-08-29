@@ -479,6 +479,17 @@ section:nth-of-type(even){ background:var(--color-bg-soft); }
 .story-card:hover .story-photo.p3{ transform:translate(-86%,0%) rotate(-15deg); }
 .story-card:hover .story-photo.p1{ transform:translate(-14%,0%) rotate(15deg); }
 
+.story-glass{
+  position:absolute; left:2%; right:2%; bottom:0; z-index:4;
+  height:34%; border-radius:16px;
+  background:
+    linear-gradient(135deg, rgba(var(--rgb-fg),.22), rgba(var(--rgb-fg),.05) 50%, rgba(var(--rgb-fg),.14) 100%),
+    rgba(var(--rgb-bg),.4);
+  backdrop-filter:blur(18px) saturate(180%);
+  -webkit-backdrop-filter:blur(18px) saturate(180%);
+  border:1px solid rgba(var(--rgb-fg),.28);
+  box-shadow:0 18px 40px -18px rgba(var(--rgb-black),.5);
+}
 
 .story-title{
   font-family:var(--font-display); font-weight:800; font-size:1.25rem;
