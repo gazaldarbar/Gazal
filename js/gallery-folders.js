@@ -113,10 +113,10 @@ var galleryData = {
     card.innerHTML =
       '<span class="story-stack">' +
         photosHtml +
+        '<span class="story-glass"></span>' +
       '</span>' +
       '<span class="story-title">' + cat.label + '</span>' +
       '<span class="story-pill">' + (count > 0 ? (count + (count === 1 ? " Photo" : " Photos")) : "Coming Soon") + '</span>';
-
     if(count > 0){
       card.setAttribute("aria-label", "Open " + cat.label + " folder, " + count + (count === 1 ? " photo" : " photos"));
       card.addEventListener("click", function(){ openFolder(key); });
