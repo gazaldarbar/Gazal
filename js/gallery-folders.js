@@ -110,27 +110,9 @@ var galleryData = {
       photosHtml += '<img class="story-photo ' + cls + '" src="' + img.src + '" alt="" loading="lazy" width="300" height="380">';
     });
 
-    var tracksHtml = "";
-    if(count > 0){
-      shown.forEach(function(img){
-        tracksHtml +=
-          '<span class="story-track">' +
-            '<span class="t-title">' + img.caption + '</span>' +
-            '<span class="t-sub">' + formatDate(img.date) + '</span>' +
-          '</span>';
-      });
-    } else {
-      tracksHtml = '<span class="story-track"><span class="t-title">Coming Soon</span><span class="t-sub">Check back soon</span></span>';
-    }
-
     card.innerHTML =
       '<span class="story-stack">' +
         photosHtml +
-        '<span class="story-glass">' +
-          '<span class="story-tracks">' + tracksHtml + '</span>' +
-          '<span class="story-icon">' + CAMERA_ICON + '</span>' +
-          '<span class="story-credit">Gazal Darbar.</span>' +
-        '</span>' +
       '</span>' +
       '<span class="story-title">' + cat.label + '</span>' +
       '<span class="story-pill">' + (count > 0 ? (count + (count === 1 ? " Photo" : " Photos")) : "Coming Soon") + '</span>';
