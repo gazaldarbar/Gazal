@@ -451,9 +451,7 @@ section:nth-of-type(even){ background:var(--color-bg-soft); }
 .why-card h3{ font-size:1.15rem; margin-bottom:.5rem; }
 .why-card p{ font-size:.9rem; color:var(--color-ink-soft); }
 
-/* ===========================================================
-   Gallery / Masonry
-   =========================================================== */
+   
 /* ===========================================================
    GALLERY — PREMIUM LIQUID GLASS FOLDERS
    =========================================================== */
@@ -492,7 +490,7 @@ section:nth-of-type(even){ background:var(--color-bg-soft); }
 .story-stack{
   position:relative;
   width:100%;
-  aspect-ratio:4 / 3;
+  aspect-ratio:1.35 / 1;
   margin-bottom:1rem;
   isolation:isolate;
 }
@@ -502,42 +500,22 @@ section:nth-of-type(even){ background:var(--color-bg-soft); }
    =========================================================== */
 
 .story-photo{
-  position:absolute;
-  top:3%;
-  left:50%;
-  width:54%;
-  height:70%;
-  object-fit:cover;
-
-  border-radius:16px 16px 7px 7px;
-  border:1px solid rgba(255,255,255,.18);
-
-  box-shadow:
-    0 18px 35px -18px rgba(0,0,0,.45);
-
-  transition:
-    transform .5s var(--ease),
-    box-shadow .5s var(--ease);
-
-  z-index:1;
+  top:1%;
+  width:52%;
+  height:66%;
+  border-radius:14px 14px 6px 6px;
 }
 
-/* Left/back photo */
 .story-photo.p3{
-  transform:translate(-88%, 7%) rotate(-10deg);
-  z-index:1;
+  transform:translate(-82%, 9%) rotate(-8deg);
 }
 
-/* Centre photo */
 .story-photo.p2{
   transform:translate(-50%, 0) rotate(0deg);
-  z-index:2;
 }
 
-/* Right/front photo — newest image */
 .story-photo.p1{
-  transform:translate(-12%, 7%) rotate(10deg);
-  z-index:3;
+  transform:translate(-18%, 9%) rotate(8deg);
 }
 
 /* ===========================================================
@@ -546,32 +524,30 @@ section:nth-of-type(even){ background:var(--color-bg-soft); }
 
 .story-glass{
   position:absolute;
-  left:4%;
-  right:4%;
-  bottom:3%;
-  height:52%;
+  left:8%;
+  right:8%;
+  bottom:5%;
+  height:48%;
   z-index:5;
 
-  border-radius:26px;
+  border-radius:22px 22px 24px 24px;
 
   background:
     linear-gradient(
       135deg,
-      rgba(255,255,255,.30) 0%,
-      rgba(255,255,255,.15) 48%,
-      rgba(255,255,255,.08) 100%
+      rgba(255,255,255,.18) 0%,
+      rgba(255,255,255,.10) 45%,
+      rgba(255,255,255,.06) 100%
     );
 
-  backdrop-filter:blur(24px) saturate(150%);
-  -webkit-backdrop-filter:blur(24px) saturate(150%);
+  backdrop-filter:blur(16px) saturate(135%);
+  -webkit-backdrop-filter:blur(16px) saturate(135%);
 
-  border:1px solid rgba(255,255,255,.28);
+  border:1px solid rgba(255,255,255,.24);
 
   box-shadow:
-    0 22px 42px -20px rgba(0,0,0,.42),
-    inset 0 1px 1px rgba(255,255,255,.30);
-
-  overflow:visible;
+    0 16px 34px -18px rgba(0,0,0,.45),
+    inset 0 1px 1px rgba(255,255,255,.22);
 
   transition:
     transform .5s var(--ease),
@@ -586,26 +562,26 @@ section:nth-of-type(even){ background:var(--color-bg-soft); }
   content:"";
   position:absolute;
 
-  top:-17px;
+  top:-15px;
   left:0;
 
-  width:45%;
-  height:27px;
+  width:40%;
+  height:22px;
 
-  border-radius:22px 22px 0 0;
+  border-radius:16px 16px 0 0;
 
   background:
     linear-gradient(
       135deg,
-      rgba(255,255,255,.30),
-      rgba(255,255,255,.12)
+      rgba(255,255,255,.20),
+      rgba(255,255,255,.09)
     );
 
-  border:1px solid rgba(255,255,255,.26);
+  border:1px solid rgba(255,255,255,.22);
   border-bottom:none;
 
   box-shadow:
-    inset 0 1px 1px rgba(255,255,255,.20);
+    inset 0 1px 1px rgba(255,255,255,.18);
 }
 
 /* Soft liquid glass light reflection */
@@ -677,12 +653,15 @@ section:nth-of-type(even){ background:var(--color-bg-soft); }
    EMPTY / COMING SOON FOLDERS
    =========================================================== */
 
-.story-card:disabled .story-photo{
-  opacity:.25;
-}
-
 .story-card:disabled .story-glass{
-  opacity:.62;
+  background:
+    linear-gradient(
+      135deg,
+      rgba(255,255,255,.12),
+      rgba(255,255,255,.05)
+    );
+
+  opacity:.75;
 }
 
 .folder-modal[hidden]{ display:none; }
