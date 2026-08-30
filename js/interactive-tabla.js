@@ -35,33 +35,33 @@
 
   function playGe(){
 
-    const ctx = getAudioContext();
-    const now = ctx.currentTime;
+  const ctx = getAudioContext();
+  const now = ctx.currentTime;
 
-    const osc = ctx.createOscillator();
-    const gain = ctx.createGain();
+  const osc = ctx.createOscillator();
+  const gain = ctx.createGain();
 
-    osc.type = "sine";
+  osc.type = "sine";
 
-    osc.frequency.setValueAtTime(140, now);
-    osc.frequency.exponentialRampToValueAtTime(
-      55,
-      now + 0.45
-    );
+  /* Start low, but include an audible upper tone */
+  osc.frequency.setValueAtTime(180, now);
+  osc.frequency.exponentialRampToValueAtTime(
+    75,
+    now + 0.38
+  );
 
-    gain.gain.setValueAtTime(0.8, now);
-    gain.gain.exponentialRampToValueAtTime(
-      0.001,
-      now + 0.5
-    );
+  gain.gain.setValueAtTime(0.9, now);
+  gain.gain.exponentialRampToValueAtTime(
+    0.001,
+    now + 0.45
+  );
 
-    osc.connect(gain);
-    gain.connect(ctx.destination);
+  osc.connect(gain);
+  gain.connect(ctx.destination);
 
-    osc.start(now);
-    osc.stop(now + 0.52);
-  }
-
+  osc.start(now);
+  osc.stop(now + 0.46);
+}
 
   /* --------------------------------------------------------
      BAYAN — KE
@@ -70,28 +70,33 @@
 
   function playKe(){
 
-    const ctx = getAudioContext();
-    const now = ctx.currentTime;
+  const ctx = getAudioContext();
+  const now = ctx.currentTime;
 
-    const osc = ctx.createOscillator();
-    const gain = ctx.createGain();
+  const osc = ctx.createOscillator();
+  const gain = ctx.createGain();
 
-    osc.type = "triangle";
-    osc.frequency.value = 110;
+  osc.type = "triangle";
 
-    gain.gain.setValueAtTime(0.5, now);
-    gain.gain.exponentialRampToValueAtTime(
-      0.001,
-      now + 0.2
-    );
+  /* Higher frequency so phones can reproduce it */
+  osc.frequency.setValueAtTime(210, now);
+  osc.frequency.exponentialRampToValueAtTime(
+    120,
+    now + 0.18
+  );
 
-    osc.connect(gain);
-    gain.connect(ctx.destination);
+  gain.gain.setValueAtTime(0.7, now);
+  gain.gain.exponentialRampToValueAtTime(
+    0.001,
+    now + 0.22
+  );
 
-    osc.start(now);
-    osc.stop(now + 0.22);
-  }
+  osc.connect(gain);
+  gain.connect(ctx.destination);
 
+  osc.start(now);
+  osc.stop(now + 0.24);
+}
 
   /* --------------------------------------------------------
      DAYAN — TIN
