@@ -98,6 +98,28 @@
   50%{ transform:translateY(-10px); }
 }
 
+/* ==========================================================
+   OPENING INTRO — START
+   Remove this entire block to disable the opening animation.
+   ========================================================== */
+
+.opening-intro{
+  position:fixed;
+  inset:0;
+  z-index:99999;
+  background:#fff;
+  overflow:hidden;
+}
+
+.opening-intro-surface{
+  position:absolute;
+  inset:0;
+  background:#fff;
+}
+
+/* ==========================================================
+   OPENING INTRO — END
+   ========================================================== */
 /* Course icon subtle idle pulse on hover already handled via transform in style.css */
 
 /* Fade-up utility (generic) */
