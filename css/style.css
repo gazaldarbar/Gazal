@@ -1722,25 +1722,46 @@ html[data-theme="7"] .lightbox{
 /* Black scratches grow and reveal the black website beneath */
 .opening-intro.is-revealing .scratch{
   opacity:1;
-  animation:scratch-grow 1.15s cubic-bezier(.65,0,.2,1) forwards;
 }
 
-.opening-intro.is-revealing .scratch-1{ animation-delay:0s; }
-.opening-intro.is-revealing .scratch-2{ animation-delay:.12s; }
-.opening-intro.is-revealing .scratch-3{ animation-delay:.24s; }
-.opening-intro.is-revealing .scratch-4{ animation-delay:.36s; }
-.opening-intro.is-revealing .scratch-5{ animation-delay:.48s; }
-.opening-intro.is-revealing .scratch-6{ animation-delay:.60s; }
-
-@keyframes scratch-grow{
-  0%{
-    transform:var(--scratch-transform, scaleX(0));
-  }
-
-  100%{
-    transform:scaleX(1.25);
-  }
+.opening-intro.is-revealing .scratch-1{
+  animation:scratch-1-grow 1.15s cubic-bezier(.65,0,.2,1) forwards;
+  animation-delay:0s;
 }
+
+.opening-intro.is-revealing .scratch-2{
+  animation:scratch-2-grow 1.15s cubic-bezier(.65,0,.2,1) forwards;
+  animation-delay:.12s;
+}
+
+.opening-intro.is-revealing .scratch-3{
+  animation:scratch-3-grow 1.15s cubic-bezier(.65,0,.2,1) forwards;
+  animation-delay:.24s;
+}
+
+.opening-intro.is-revealing .scratch-4{
+  animation:scratch-4-grow 1.15s cubic-bezier(.65,0,.2,1) forwards;
+  animation-delay:.36s;
+}
+
+.opening-intro.is-revealing .scratch-5{
+  animation:scratch-5-grow 1.15s cubic-bezier(.65,0,.2,1) forwards;
+  animation-delay:.48s;
+}
+
+.opening-intro.is-revealing .scratch-6{
+  animation:scratch-6-grow 1.15s cubic-bezier(.65,0,.2,1) forwards;
+  animation-delay:.60s;
+}
+
+@keyframes scratch-1-grow { to { transform:rotate(-8deg) scaleX(1.25); } }
+@keyframes scratch-2-grow { to { transform:rotate(4deg) scaleX(1.25); } }
+@keyframes scratch-3-grow { to { transform:rotate(-3deg) scaleX(1.25); } }
+@keyframes scratch-4-grow { to { transform:rotate(6deg) scaleX(1.25); } }
+@keyframes scratch-5-grow { to { transform:rotate(-5deg) scaleX(1.25); } }
+@keyframes scratch-6-grow { to { transform:rotate(2deg) scaleX(1.25); } }
+
+
 
 /* After scratches appear, dissolve the remaining white surface */
 .opening-intro.is-fading{
