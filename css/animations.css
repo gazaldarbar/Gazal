@@ -125,33 +125,50 @@
   overflow:hidden;
 }
 
-/* The black brush stroke */
+/* ===== TEXTURED ARTISTIC BRUSH STROKE ===== */
+
 .opening-brush{
   position:absolute;
   left:-15vw;
   top:50%;
   width:130vw;
-  height:14vh;
+  height:18vh;
 
-  background:#050505;
+  /*
+    Multiple fine horizontal streaks create
+    a dry-brush / bristle texture.
+  */
+  background:
+    repeating-linear-gradient(
+      to bottom,
+      #050505 0,
+      #050505 7%,
+      transparent 7%,
+      transparent 10%
+    );
 
-  /* Organic angled brush shape */
   clip-path:polygon(
-    0 35%,
-    8% 15%,
-    20% 28%,
-    35% 5%,
-    52% 22%,
-    68% 10%,
-    82% 30%,
-    100% 8%,
-    100% 78%,
-    88% 95%,
-    70% 72%,
-    55% 92%,
-    38% 70%,
-    18% 96%,
-    0 75%
+    0 42%,
+    6% 24%,
+    14% 35%,
+    23% 16%,
+    34% 28%,
+    45% 8%,
+    58% 22%,
+    70% 12%,
+    84% 32%,
+    100% 14%,
+
+    100% 72%,
+    92% 86%,
+    83% 68%,
+    73% 92%,
+    61% 74%,
+    49% 96%,
+    37% 70%,
+    25% 88%,
+    12% 72%,
+    0 82%
   );
 
   transform:translateX(-120%) rotate(-6deg);
@@ -159,16 +176,35 @@
 
   animation:brush-sweep 1.15s cubic-bezier(.7,0,.2,1) forwards;
   animation-delay:.25s;
+
+  /* Makes the edges slightly less digitally perfect */
+  filter:blur(.15px);
 }
 
-@keyframes brush-sweep{
-  0%{
-    transform:translateX(-120%) rotate(-6deg);
-  }
+/* Extra bristle streaks */
+.opening-brush::before,
+.opening-brush::after{
+  content:"";
+  position:absolute;
+  inset:0;
+  background:
+    repeating-linear-gradient(
+      to bottom,
+      transparent 0,
+      transparent 9%,
+      rgba(255,255,255,.95) 9%,
+      rgba(255,255,255,.95) 11%,
+      transparent 11%,
+      transparent 18%
+    );
 
-  100%{
-    transform:translateX(0) rotate(-6deg);
-  }
+  mix-blend-mode:screen;
+  opacity:.7;
+}
+
+.opening-brush::after{
+  transform:translateY(4px);
+  opacity:.45;
 }
 
 /* Smoothly reveal the black-themed website underneath */
