@@ -76,3 +76,24 @@
   }
 })();
 
+/* ===========================================================
+   GAZAL DARBAR — OPENING SCRATCH REVEAL
+   =========================================================== */
+
+window.addEventListener("load", () => {
+  const intro = document.getElementById("scratchIntro");
+
+  if (!intro) return;
+
+  requestAnimationFrame(() => {
+    intro.classList.add("is-playing");
+  });
+
+  setTimeout(() => {
+    intro.classList.add("is-leaving");
+  }, 1400);
+
+  setTimeout(() => {
+    intro.remove();
+  }, 1900);
+});
