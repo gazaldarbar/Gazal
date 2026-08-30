@@ -76,25 +76,3 @@
   }
 })();
 
-/* ===========================================================
-   GAZAL DARBAR — WHITE SCRATCH OPENING REVEAL
-   =========================================================== */
-window.addEventListener("load", () => {
-  const openingIntro = document.getElementById("openingIntro");
-
-  if (!openingIntro) return;
-
-  requestAnimationFrame(() => {
-    openingIntro.classList.add("is-revealing");
-  });
-
-  // Let the scratches grow first
-  setTimeout(() => {
-    openingIntro.classList.add("is-fading");
-  }, 1500);
-
-  // Remove the overlay completely
-  setTimeout(() => {
-    openingIntro.remove();
-  }, 2100);
-});
