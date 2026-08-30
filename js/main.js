@@ -75,3 +75,28 @@
     sections.forEach(function (s) { navObserver.observe(s); });
   }
 })();
+
+/* ===========================================================
+   GAZAL DARBAR — OPENING INTRO
+   =========================================================== */
+
+window.addEventListener("load", () => {
+  const openingIntro = document.getElementById("openingIntro");
+
+  if (!openingIntro) return;
+
+  // Start the entrance animation
+  requestAnimationFrame(() => {
+    openingIntro.classList.add("is-playing");
+  });
+
+  // Reveal the website after the intro finishes
+  setTimeout(() => {
+    openingIntro.classList.add("is-leaving");
+
+    setTimeout(() => {
+      openingIntro.remove();
+    }, 900);
+
+  }, 2200);
+});
