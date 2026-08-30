@@ -219,3 +219,26 @@
 /* ==========================================================
    HERO SCROLL EXIT — END EXPERIMENT
    ========================================================== */
+
+/* ==========================================================
+   GALLERY IMAGE SLIDER — EXPERIMENT START
+   Only affects images inside the existing folder modal.
+   ========================================================== */
+
+.folder-modal-stage{
+  position:relative;
+  overflow:hidden;
+}
+
+/* The current image will later use these transitions */
+#folderModalImage{
+  display:block;
+  width:100%;
+  height:100%;
+  object-fit:contain;
+  will-change:transform, opacity;
+}
+
+/* ==========================================================
+   GALLERY IMAGE SLIDER — EXPERIMENT END
+   ========================================================== */
