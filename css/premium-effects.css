@@ -453,3 +453,62 @@
 /* ==========================================================
    PREMIUM GALLERY SLIDER — END
    ========================================================== */
+
+/* ==========================================================
+   GALLERY MODAL LAYOUT FIX
+   Keeps the image stage and slider in separate clean areas
+   ========================================================== */
+
+.folder-modal-box{
+  max-height:92vh;
+}
+
+/* Give the image its own stable area */
+.folder-modal-stage{
+  flex:0 0 auto;
+  height:min(68vh, 620px);
+  overflow:hidden;
+}
+
+/* Make the image stay completely inside the stage */
+.folder-modal-image{
+  width:100%;
+  height:100%;
+  max-width:100%;
+  max-height:100%;
+  object-fit:contain;
+}
+
+/* Keep navigation vertically centred inside the image area */
+.folder-modal-nav{
+  top:50%;
+}
+
+/* Give the slider its own clean space below the image */
+.folder-modal-slider{
+  flex:0 0 auto;
+  margin:0 auto;
+  padding:20px 0 18px;
+}
+
+/* Mobile optimisation */
+@media (max-width:600px){
+
+  .folder-modal{
+    padding:2vh 3vw;
+  }
+
+  .folder-modal-box{
+    width:94vw;
+  }
+
+  .folder-modal-stage{
+    height:min(60vh, 520px);
+  }
+
+  .folder-modal-slider{
+    width:88%;
+    padding:18px 0 16px;
+  }
+
+}
