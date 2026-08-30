@@ -11,7 +11,7 @@ document.addEventListener('DOMContentLoaded', () => {
   // Keep the white screen visible briefly when the website opens.
   setTimeout(() => {
     intro.classList.add('is-leaving');
-  }, 600);
+  }, 1500);
 
   // Remove the overlay completely after its CSS animation ends.
   intro.addEventListener('transitionend', () => {
