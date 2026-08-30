@@ -117,6 +117,13 @@
   background:#fff;
 }
 
+/* Smoothly reveal the black-themed website underneath */
+.opening-intro.is-leaving{
+  opacity:0;
+  transition:opacity .8s ease;
+  pointer-events:none;
+}
+
 /* ==========================================================
    OPENING INTRO — END
    ========================================================== */
