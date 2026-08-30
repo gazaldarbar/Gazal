@@ -243,4 +243,31 @@
    GALLERY IMAGE SLIDER — EXPERIMENT END
    ========================================================== */
 
+/* ==========================================================
+   CINEMATIC HERO SCROLL TRANSITION — START
+   Remove this entire section to reverse the CSS changes.
+   ========================================================== */
 
+/* Extra scroll distance for the cinematic transition */
+.hero-scroll-scene{
+  position:relative;
+  height:180vh;
+}
+
+/* Keep the existing hero visible while scrolling through the scene */
+.hero-scroll-scene .hero{
+  position:sticky;
+  top:0;
+  height:100vh;
+  overflow:hidden;
+}
+
+/* Entire hero visual transformation is applied through JS */
+.hero-scroll-scene .hero{
+  transform-origin:center center;
+  will-change:filter, transform, opacity;
+}
+
+/* ==========================================================
+   CINEMATIC HERO SCROLL TRANSITION — END
+   ========================================================== */
