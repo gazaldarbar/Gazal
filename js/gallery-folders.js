@@ -206,24 +206,37 @@ if(slider && sliderProgress && sliderHandle){
   }
 
   function closeModal(){
-    modal.hidden = true;
-    document.body.style.position = "";
-    document.body.style.top = "";
-    document.body.style.left = "";
-    document.body.style.right = "";
-    document.body.style.overflow = "";
-    // Restore scroll position first, then focus — focusing an element can
-    // itself trigger the browser to scroll it into view, which was racing
-    // against (and sometimes winning over) the scroll restore below.
-    requestAnimationFrame(function(){
-      window.scrollTo(0, lockedScrollY);
-      window.scrollTo(0, lockedScrollY);
-      if(lastFocused && typeof lastFocused.focus === "function"){
-        lastFocused.focus({ preventScroll: true });
-      }
-    });
+
+  var restoreY = lockedScrollY;
+
+  modal.hidden = true;
+
+  /* Remove the scroll lock */
+  document.body.style.position = "";
+  document.body.style.top = "";
+  document.body.style.left = "";
+  document.body.style.right = "";
+  document.body.style.overflow = "";
+
+  /*
+    Restore the exact scroll position immediately.
+    This prevents the visible jump to the top.
+  */
+  window.scrollTo({
+    top: restoreY,
+    left: 0,
+    behavior: "instant"
+  });
+
+  /*
+    Restore focus without allowing the browser
+    to scroll the page toward that element.
+  */
+  if(lastFocused && typeof lastFocused.focus === "function"){
+    lastFocused.focus({ preventScroll: true });
   }
 
+}
   function showNext(){
   var cat = galleryData[activeCategory];
   activeIndex = (activeIndex + 1) % cat.images.length;
