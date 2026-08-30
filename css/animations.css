@@ -117,6 +117,60 @@
   background:#fff;
 }
 
+/* ===== ARTISTIC BRUSH STROKE ===== */
+
+.opening-intro-surface{
+  position:absolute;
+  inset:0;
+  overflow:hidden;
+}
+
+/* The black brush stroke */
+.opening-brush{
+  position:absolute;
+  left:-15vw;
+  top:50%;
+  width:130vw;
+  height:14vh;
+
+  background:#050505;
+
+  /* Organic angled brush shape */
+  clip-path:polygon(
+    0 35%,
+    8% 15%,
+    20% 28%,
+    35% 5%,
+    52% 22%,
+    68% 10%,
+    82% 30%,
+    100% 8%,
+    100% 78%,
+    88% 95%,
+    70% 72%,
+    55% 92%,
+    38% 70%,
+    18% 96%,
+    0 75%
+  );
+
+  transform:translateX(-120%) rotate(-6deg);
+  transform-origin:left center;
+
+  animation:brush-sweep 1.15s cubic-bezier(.7,0,.2,1) forwards;
+  animation-delay:.25s;
+}
+
+@keyframes brush-sweep{
+  0%{
+    transform:translateX(-120%) rotate(-6deg);
+  }
+
+  100%{
+    transform:translateX(0) rotate(-6deg);
+  }
+}
+
 /* Smoothly reveal the black-themed website underneath */
 .opening-intro.is-leaving{
   opacity:0;
