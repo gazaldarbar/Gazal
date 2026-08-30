@@ -38,29 +38,39 @@
   const ctx = getAudioContext();
   const now = ctx.currentTime;
 
+  /* Main bass body */
   const osc = ctx.createOscillator();
   const gain = ctx.createGain();
 
   osc.type = "sine";
+  osc.frequency.setValueAtTime(165, now);
+  osc.frequency.exponentialRampToValueAtTime(72, now + 0.5);
 
-  /* Start low, but include an audible upper tone */
-  osc.frequency.setValueAtTime(180, now);
-  osc.frequency.exponentialRampToValueAtTime(
-    75,
-    now + 0.38
-  );
-
-  gain.gain.setValueAtTime(0.9, now);
-  gain.gain.exponentialRampToValueAtTime(
-    0.001,
-    now + 0.45
-  );
+  gain.gain.setValueAtTime(0.75, now);
+  gain.gain.exponentialRampToValueAtTime(0.001, now + 0.55);
 
   osc.connect(gain);
   gain.connect(ctx.destination);
 
+  /* Upper resonance gives the bass definition */
+  const harmonic = ctx.createOscillator();
+  const harmonicGain = ctx.createGain();
+
+  harmonic.type = "sine";
+  harmonic.frequency.setValueAtTime(280, now);
+  harmonic.frequency.exponentialRampToValueAtTime(150, now + 0.32);
+
+  harmonicGain.gain.setValueAtTime(0.22, now);
+  harmonicGain.gain.exponentialRampToValueAtTime(0.001, now + 0.35);
+
+  harmonic.connect(harmonicGain);
+  harmonicGain.connect(ctx.destination);
+
   osc.start(now);
-  osc.stop(now + 0.46);
+  harmonic.start(now);
+
+  osc.stop(now + 0.57);
+  harmonic.stop(now + 0.37);
 }
 
   /* --------------------------------------------------------
@@ -77,19 +87,11 @@
   const gain = ctx.createGain();
 
   osc.type = "triangle";
+  osc.frequency.setValueAtTime(190, now);
+  osc.frequency.exponentialRampToValueAtTime(105, now + 0.18);
 
-  /* Higher frequency so phones can reproduce it */
-  osc.frequency.setValueAtTime(210, now);
-  osc.frequency.exponentialRampToValueAtTime(
-    120,
-    now + 0.18
-  );
-
-  gain.gain.setValueAtTime(0.7, now);
-  gain.gain.exponentialRampToValueAtTime(
-    0.001,
-    now + 0.22
-  );
+  gain.gain.setValueAtTime(0.6, now);
+  gain.gain.exponentialRampToValueAtTime(0.001, now + 0.22);
 
   osc.connect(gain);
   gain.connect(ctx.destination);
@@ -105,27 +107,41 @@
 
   function playTin(){
 
-    const ctx = getAudioContext();
-    const now = ctx.currentTime;
+  const ctx = getAudioContext();
+  const now = ctx.currentTime;
 
-    const osc = ctx.createOscillator();
-    const gain = ctx.createGain();
+  /* Main ringing tone */
+  const osc1 = ctx.createOscillator();
+  const gain1 = ctx.createGain();
 
-    osc.type = "triangle";
-    osc.frequency.value = 620;
+  osc1.type = "sine";
+  osc1.frequency.value = 480;
 
-    gain.gain.setValueAtTime(0.42, now);
-    gain.gain.exponentialRampToValueAtTime(
-      0.001,
-      now + 0.4
-    );
+  gain1.gain.setValueAtTime(0.42, now);
+  gain1.gain.exponentialRampToValueAtTime(0.001, now + 0.65);
 
-    osc.connect(gain);
-    gain.connect(ctx.destination);
+  osc1.connect(gain1);
+  gain1.connect(ctx.destination);
 
-    osc.start(now);
-    osc.stop(now + 0.42);
-  }
+  /* Higher harmonic */
+  const osc2 = ctx.createOscillator();
+  const gain2 = ctx.createGain();
+
+  osc2.type = "sine";
+  osc2.frequency.value = 720;
+
+  gain2.gain.setValueAtTime(0.18, now);
+  gain2.gain.exponentialRampToValueAtTime(0.001, now + 0.42);
+
+  osc2.connect(gain2);
+  gain2.connect(ctx.destination);
+
+  osc1.start(now);
+  osc2.start(now);
+
+  osc1.stop(now + 0.7);
+  osc2.stop(now + 0.48);
+}
 
 
   /* --------------------------------------------------------
@@ -135,51 +151,51 @@
 
   function playNa(){
 
-    const ctx = getAudioContext();
-    const now = ctx.currentTime;
+  const ctx = getAudioContext();
+  const now = ctx.currentTime;
 
-    const osc = ctx.createOscillator();
-    const gain = ctx.createGain();
+  /* Short tonal attack */
+  const osc = ctx.createOscillator();
+  const gain = ctx.createGain();
 
-    osc.type = "square";
-    osc.frequency.value = 420;
+  osc.type = "triangle";
+  osc.frequency.setValueAtTime(850, now);
+  osc.frequency.exponentialRampToValueAtTime(420, now + 0.09);
 
-    gain.gain.setValueAtTime(0.18, now);
-    gain.gain.exponentialRampToValueAtTime(
-      0.001,
-      now + 0.12
-    );
+  gain.gain.setValueAtTime(0.32, now);
+  gain.gain.exponentialRampToValueAtTime(0.001, now + 0.13);
 
-    osc.connect(gain);
-    gain.connect(ctx.destination);
+  osc.connect(gain);
+  gain.connect(ctx.destination);
 
-    osc.start(now);
-    osc.stop(now + 0.14);
+  /* Tiny noise attack for a skin-strike feel */
+  const bufferSize = Math.floor(ctx.sampleRate * 0.035);
+  const buffer = ctx.createBuffer(1, bufferSize, ctx.sampleRate);
+  const data = buffer.getChannelData(0);
+
+  for(let i = 0; i < bufferSize; i++){
+    data[i] = (Math.random() * 2 - 1) * (1 - i / bufferSize);
   }
 
+  const noise = ctx.createBufferSource();
+  const noiseGain = ctx.createGain();
 
-  function playStroke(sound){
+  noise.buffer = buffer;
 
-    switch(sound){
+  noiseGain.gain.setValueAtTime(0.10, now);
+  noiseGain.gain.exponentialRampToValueAtTime(
+    0.001,
+    now + 0.04
+  );
 
-      case "ge":
-        playGe();
-        break;
+  noise.connect(noiseGain);
+  noiseGain.connect(ctx.destination);
 
-      case "ke":
-        playKe();
-        break;
+  osc.start(now);
+  noise.start(now);
 
-      case "tin":
-        playTin();
-        break;
-
-      case "na":
-        playNa();
-        break;
-    }
-  }
-
+  osc.stop(now + 0.15);
+}
 
   /* ========================================================
      CLICK / TOUCH
