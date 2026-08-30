@@ -77,7 +77,7 @@
 })();
 
 /* ===========================================================
-   GAZAL DARBAR — OPENING INTRO
+   GAZAL DARBAR — WHITE SCRATCH OPENING REVEAL
    =========================================================== */
 
 window.addEventListener("load", () => {
@@ -85,18 +85,14 @@ window.addEventListener("load", () => {
 
   if (!openingIntro) return;
 
-  // Start the entrance animation
+  // Start the scratch reveal after the website has loaded
   requestAnimationFrame(() => {
-    openingIntro.classList.add("is-playing");
+    openingIntro.classList.add("is-revealing");
   });
 
-  // Reveal the website after the intro finishes
+  // Remove the white overlay after the final scratch finishes
   setTimeout(() => {
-    openingIntro.classList.add("is-leaving");
-
-    setTimeout(() => {
-      openingIntro.remove();
-    }, 900);
-
-  }, 2200);
+    openingIntro.classList.add("is-finished");
+    openingIntro.remove();
+  }, 1850);
 });
