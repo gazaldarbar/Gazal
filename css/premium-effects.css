@@ -575,3 +575,130 @@
   }
 }
 
+/* ==========================================================
+   INTERACTIVE TABLA
+   ========================================================== */
+
+.interactive-tabla-section{
+  position:relative;
+  overflow:hidden;
+  padding:clamp(70px, 10vw, 120px) 0;
+}
+
+.tabla-inner{
+  text-align:center;
+}
+
+.tabla-intro{
+  max-width:520px;
+  margin:18px auto 36px;
+  color:var(--color-ink-soft);
+  line-height:1.7;
+}
+
+/* Main tabla image container */
+.tabla-player{
+  position:relative;
+  width:min(92vw, 680px);
+  margin:0 auto;
+  line-height:0;
+  user-select:none;
+  -webkit-tap-highlight-color:transparent;
+}
+
+.tabla-image{
+  display:block;
+  width:100%;
+  height:auto;
+  pointer-events:none;
+  filter:drop-shadow(0 20px 28px rgba(var(--rgb-shadow), .20));
+}
+
+/* Invisible interactive zones */
+.tabla-zone{
+  position:absolute;
+  border:0;
+  background:transparent;
+  padding:0;
+  cursor:pointer;
+  border-radius:50%;
+  -webkit-tap-highlight-color:transparent;
+  touch-action:manipulation;
+
+  transition:
+    transform .1s ease,
+    background .15s ease;
+}
+
+/* Left drum — Bayan */
+.bayan-center{
+  left:8%;
+  top:24%;
+  width:34%;
+  height:54%;
+}
+
+.bayan-edge{
+  left:3%;
+  top:16%;
+  width:44%;
+  height:70%;
+}
+
+/* Right drum — Dayan */
+.dayan-center{
+  right:10%;
+  top:23%;
+  width:31%;
+  height:54%;
+}
+
+.dayan-edge{
+  right:4%;
+  top:15%;
+  width:42%;
+  height:72%;
+}
+
+/*
+  During testing, uncomment these lines
+  to see the clickable areas.
+*/
+
+/*
+.tabla-zone{
+  background:rgba(255,0,0,.15);
+  border:1px solid rgba(255,0,0,.4);
+}
+*/
+
+/* Strike feedback */
+.tabla-zone.is-playing{
+  transform:scale(.94);
+}
+
+/* Hint */
+.tabla-hint{
+  margin:22px 0 0;
+  font-size:.82rem;
+  color:var(--color-ink-soft);
+  opacity:.72;
+}
+
+/* Mobile */
+@media (max-width:600px){
+
+  .interactive-tabla-section{
+    padding:70px 0;
+  }
+
+  .tabla-player{
+    width:94vw;
+  }
+
+  .tabla-intro{
+    width:88%;
+    margin-bottom:28px;
+  }
+
+}
