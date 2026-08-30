@@ -131,19 +131,46 @@ var galleryData = {
     grid.appendChild(buildCard(key));
   });
 
-  function renderSlide(){
-    var cat = galleryData[activeCategory];
-    var img = cat.images[activeIndex];
+  function renderSlide(direction){
+  var cat = galleryData[activeCategory];
+  var img = cat.images[activeIndex];
+
+  /* First image / opening the folder: no slide needed */
+  if(!direction){
     modalImage.src = img.src;
     modalImage.alt = img.alt || img.caption || "";
-    modalTitle.textContent = cat.label;
-    var num = String(activeIndex + 1).padStart(2, "0");
-    var total = String(cat.images.length).padStart(2, "0");
-    modalCounter.textContent = num + " / " + total;
-    var multi = cat.images.length > 1;
-    btnPrev.style.display = multi ? "" : "none";
-    btnNext.style.display = multi ? "" : "none";
+  } else {
+    /* Prepare the incoming image outside the screen */
+    var incomingFrom = direction === "next" ? "100%" : "-100%";
+    var outgoingTo = direction === "next" ? "-100%" : "100%";
+
+    modalImage.style.transition = "none";
+    modalImage.style.transform = "translateX(" + incomingFrom + ")";
+    modalImage.style.opacity = "0";
+
+    /* Change image while it is outside the visible stage */
+    modalImage.src = img.src;
+    modalImage.alt = img.alt || img.caption || "";
+
+    requestAnimationFrame(function(){
+      modalImage.style.transition =
+        "transform .55s cubic-bezier(.22,.8,.2,1), opacity .4s ease";
+
+      modalImage.style.transform = "translateX(0)";
+      modalImage.style.opacity = "1";
+    });
   }
+
+  modalTitle.textContent = cat.label;
+
+  var num = String(activeIndex + 1).padStart(2, "0");
+  var total = String(cat.images.length).padStart(2, "0");
+  modalCounter.textContent = num + " / " + total;
+
+  var multi = cat.images.length > 1;
+  btnPrev.style.display = multi ? "" : "none";
+  btnNext.style.display = multi ? "" : "none";
+}
 
   function openFolder(key){
     activeCategory = key;
@@ -180,15 +207,15 @@ var galleryData = {
   }
 
   function showNext(){
-    var cat = galleryData[activeCategory];
-    activeIndex = (activeIndex + 1) % cat.images.length;
-    renderSlide();
-  }
+  var cat = galleryData[activeCategory];
+  activeIndex = (activeIndex + 1) % cat.images.length;
+  renderSlide("next");
+}
   function showPrev(){
-    var cat = galleryData[activeCategory];
-    activeIndex = (activeIndex - 1 + cat.images.length) % cat.images.length;
-    renderSlide();
-  }
+  var cat = galleryData[activeCategory];
+  activeIndex = (activeIndex - 1 + cat.images.length) % cat.images.length;
+  renderSlide("prev");
+}
 
   btnNext.addEventListener("click", showNext);
   btnPrev.addEventListener("click", showPrev);
