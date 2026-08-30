@@ -207,12 +207,23 @@
   opacity:.45;
 }
 
+@keyframes brush-sweep{
+  0%{
+    transform:translateX(-120%) rotate(-6deg);
+  }
+
+  100%{
+    transform:translateX(0) rotate(-6deg);
+  }
+}
+
 /* Smoothly reveal the black-themed website underneath */
 .opening-intro.is-leaving{
   opacity:0;
   transition:opacity .8s ease;
   pointer-events:none;
 }
+
 
 /* ==========================================================
    OPENING INTRO — END
