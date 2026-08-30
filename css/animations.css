@@ -181,30 +181,68 @@
   filter:blur(.15px);
 }
 
-/* Extra bristle streaks */
-.opening-brush::before,
-.opening-brush::after{
-  content:"";
+/* ===== NATURAL DRY BRUSH STROKE ===== */
+
+.opening-brush{
   position:absolute;
-  inset:0;
+  left:-15vw;
+  top:50%;
+  width:130vw;
+  height:22vh;
+
+  /*
+    Uneven black bristle bands.
+    The transparent gaps let the white canvas show through.
+  */
   background:
+    linear-gradient(
+      to right,
+      transparent 0%,
+      #050505 8%,
+      #050505 100%
+    ),
     repeating-linear-gradient(
       to bottom,
-      transparent 0,
-      transparent 9%,
-      rgba(255,255,255,.95) 9%,
-      rgba(255,255,255,.95) 11%,
-      transparent 11%,
-      transparent 18%
+      #050505 0px,
+      #050505 8px,
+      transparent 9px,
+      transparent 12px,
+      #050505 13px,
+      #050505 22px,
+      transparent 24px,
+      transparent 28px
     );
 
-  mix-blend-mode:screen;
-  opacity:.7;
-}
+  clip-path:polygon(
+    0 45%,
+    5% 28%,
+    13% 34%,
+    22% 18%,
+    31% 30%,
+    42% 10%,
+    54% 24%,
+    66% 14%,
+    78% 30%,
+    89% 16%,
+    100% 25%,
 
-.opening-brush::after{
-  transform:translateY(4px);
-  opacity:.45;
+    100% 72%,
+    91% 88%,
+    80% 70%,
+    68% 94%,
+    56% 76%,
+    45% 92%,
+    33% 72%,
+    21% 90%,
+    10% 74%,
+    0 84%
+  );
+
+  transform:translateX(-120%) rotate(-5deg);
+  transform-origin:left center;
+
+  animation:brush-sweep 1.15s cubic-bezier(.7,0,.2,1) forwards;
+  animation-delay:.25s;
 }
 
 @keyframes brush-sweep{
