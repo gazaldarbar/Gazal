@@ -242,3 +242,26 @@
 /* ==========================================================
    GALLERY IMAGE SLIDER — EXPERIMENT END
    ========================================================== */
+
+/* ==========================================================
+   CINEMATIC HERO → ABOUT SCROLL TRANSITION — EXPERIMENT
+   Remove this entire block to reverse.
+   ========================================================== */
+
+/* Create extra scroll distance for the cinematic handoff */
+.hero{
+  position:sticky;
+  top:0;
+  height:100vh;
+  z-index:1;
+}
+
+/* Keep About above the fading/blurring hero */
+.about{
+  position:relative;
+  z-index:2;
+}
+
+/* ==========================================================
+   CINEMATIC HERO → ABOUT SCROLL TRANSITION — END
+   ========================================================== */
