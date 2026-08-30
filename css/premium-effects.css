@@ -243,38 +243,3 @@
    GALLERY IMAGE SLIDER — EXPERIMENT END
    ========================================================== */
 
-/* ==========================================================
-   CINEMATIC HERO → NEXT SECTION TRANSITION
-   ========================================================== */
-
-/* Creates the extra scroll distance */
-.hero-scroll-scene{
-  position:relative;
-  height:200vh;
-  z-index:1;
-}
-
-/* Pin the hero to the viewport while the scene scrolls */
-.hero-scroll-scene > .hero{
-  position:sticky !important;
-  top:0;
-  width:100%;
-  height:100vh;
-  height:100svh;
-  overflow:hidden;
-  z-index:1;
-
-  transform-origin:center center;
-  will-change:filter, transform, opacity;
-}
-
-/* Make the content following the cinematic scene capable
-   of sitting visually above the fading hero */
-.hero-scroll-scene + *{
-  position:relative;
-  z-index:5;
-}
-
-/* ==========================================================
-   CINEMATIC HERO → NEXT SECTION TRANSITION — END
-   ========================================================== */
