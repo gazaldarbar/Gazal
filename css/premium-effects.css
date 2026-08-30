@@ -244,30 +244,37 @@
    ========================================================== */
 
 /* ==========================================================
-   CINEMATIC HERO SCROLL TRANSITION — START
-   Remove this entire section to reverse the CSS changes.
+   CINEMATIC HERO → NEXT SECTION TRANSITION
    ========================================================== */
 
-/* Extra scroll distance for the cinematic transition */
+/* Creates the extra scroll distance */
 .hero-scroll-scene{
   position:relative;
-  height:180vh;
+  height:200vh;
+  z-index:1;
 }
 
-/* Keep the existing hero visible while scrolling through the scene */
-.hero-scroll-scene .hero{
-  position:sticky;
+/* Pin the hero to the viewport while the scene scrolls */
+.hero-scroll-scene > .hero{
+  position:sticky !important;
   top:0;
+  width:100%;
   height:100vh;
+  height:100svh;
   overflow:hidden;
-}
+  z-index:1;
 
-/* Entire hero visual transformation is applied through JS */
-.hero-scroll-scene .hero{
   transform-origin:center center;
   will-change:filter, transform, opacity;
 }
 
+/* Make the content following the cinematic scene capable
+   of sitting visually above the fading hero */
+.hero-scroll-scene + *{
+  position:relative;
+  z-index:5;
+}
+
 /* ==========================================================
-   CINEMATIC HERO SCROLL TRANSITION — END
+   CINEMATIC HERO → NEXT SECTION TRANSITION — END
    ========================================================== */
