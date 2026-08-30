@@ -404,7 +404,7 @@
   </section>
 
 <!-- ============ RHYTHM PAD ============ -->
-<section class="rhythm-pad-section" id="rhythm-pad">
+<section class="rhythm-pad-section" id="rhythm-pad" hidden>
   <div class="section-inner rhythm-pad-inner">
 
     <p class="eyebrow center">Feel the Rhythm</p>
@@ -439,6 +439,60 @@
     </div>
 
     <p class="rhythm-pad-hint">Tap the pads and create your own rhythm</p>
+
+  </div>
+</section>
+
+<!-- ============ INTERACTIVE TABLA ============ -->
+<section class="interactive-tabla-section" id="interactive-tabla">
+  <div class="section-inner tabla-inner">
+
+    <p class="eyebrow center">Feel the Rhythm</p>
+    <h2 class="section-title center">Play the Tabla</h2>
+
+    <p class="tabla-intro">
+      Tap different parts of the tabla and discover the sounds of rhythm.
+    </p>
+
+    <div class="tabla-player" id="academyTabla">
+
+      <!-- Replace this image path with your final realistic tabla image -->
+      <img
+        src="assets/images/tabla-interactive.webp"
+        alt="Interactive Indian tabla"
+        class="tabla-image"
+        draggable="false"
+      >
+
+      <!-- Left tabla — bass / Bayan -->
+      <button
+        class="tabla-zone bayan-center"
+        data-sound="ge"
+        aria-label="Play Ge bass sound">
+      </button>
+
+      <button
+        class="tabla-zone bayan-edge"
+        data-sound="ke"
+        aria-label="Play Ke sound">
+      </button>
+
+      <!-- Right tabla — Dayan -->
+      <button
+        class="tabla-zone dayan-center"
+        data-sound="tin"
+        aria-label="Play Tin sound">
+      </button>
+
+      <button
+        class="tabla-zone dayan-edge"
+        data-sound="na"
+        aria-label="Play Na sound">
+      </button>
+
+    </div>
+
+    <p class="tabla-hint">Tap the drums to play different sounds</p>
 
   </div>
 </section>
