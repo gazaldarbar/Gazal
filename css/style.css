@@ -1651,34 +1651,5 @@ html[data-theme="7"] .lightbox{
   --rgb-cream: 255,255,255;
 }
 
-/* ===========================================================
-   GAZAL DARBAR — AUTOMATIC SCRATCH REVEAL
-   =========================================================== */
 
-html.intro-active,
-html.intro-active body {
-  overflow: hidden;
-  height: 100%;
-}
 
-#scratchReveal {
-  position: fixed;
-  inset: 0;
-  width: 100vw;
-  height: 100vh;
-  z-index: 99999;
-  display: block;
-  opacity: 1;
-  transition: opacity 0.7s ease;
-  pointer-events: none;
-}
-
-#scratchReveal.is-fading {
-  opacity: 0;
-}
-
-@media (prefers-reduced-motion: reduce) {
-  #scratchReveal {
-    display: none;
-  }
-}
