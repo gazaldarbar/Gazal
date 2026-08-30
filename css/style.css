@@ -1652,5 +1652,81 @@ html[data-theme="7"] .lightbox{
   --rgb-cream: 255,255,255;
 }
 
+/* ---------- Theme 8 — "Forest Green / Mustard Yellow" ---------- */
+html[data-theme="8"]{
+  --color-bg:             #1F3D2E;
+  --color-bg-soft:        #DFAF34;
+  --color-bg-deep:        #163025;
+  --color-bg-alt:         #19372A;
+  --color-pure-black:     #0E2118;
 
+  --color-ivory:          #2B5942;
+  --color-charcoal:       #FFFFFF;
+  --color-charcoal-soft:  #FFFFFF;
+  --color-bronze:         #FFFFFF;
+  --color-bronze-light:   #FFFFFF;
+  --color-bronze-deep:    #DDECEC;
+  --color-red:            #FFFFFF;
+  --color-red-deep:       #E0EDED;
+  --color-ink:            #FFFFFF;
+  --color-ink-soft:       #DDECEC;
+
+  --color-border:         #58895F;
+  --color-border-strong:  #819452;
+  --color-schedule-accent:#DDECEC;
+  --color-modal-text-soft:#DDECEC;
+  --color-badge-ink:      #1F3D2E;
+  --color-scrim-text:     #FFFFFF;
+
+  --rgb-fg:        255,255,255;
+  --rgb-glow:      255,255,255;
+  --rgb-shadow:    14,33,24;
+  --rgb-cream:     255,255,255;
+  --rgb-black:     0,0,0;
+  --rgb-lightbox:  10,10,10;
+  --rgb-track:     130,130,130;
+  --rgb-bg:        31,61,46;
+  --rgb-btn-shadow:221,236,236;
+}
+
+/* Alternate / light sections */
+html[data-theme="8"] section:nth-of-type(even),
+html[data-theme="8"] .course-modal {
+  --color-bg-soft:        #DFAF34;
+  --color-ivory:          #C6A83C;
+  --color-charcoal:       #1A1A1A;
+  --color-charcoal-soft:  #1A1A1A;
+  --color-bronze:         #1A1A1A;
+  --color-bronze-light:   #1A1A1A;
+  --color-bronze-deep:    #534522;
+  --color-red:            #1A1A1A;
+  --color-red-deep:       #4B3F20;
+  --color-ink:            #1A1A1A;
+  --color-ink-soft:       #534522;
+  --color-border:         #969A4B;
+  --color-border-strong:  #6D8F58;
+  --color-schedule-accent:#534522;
+  --color-modal-text-soft:#534522;
+  --color-badge-ink:      #DFAF34;
+}
+
+/* Footer */
+html[data-theme="8"] .site-footer{
+  --grad-charcoal: linear-gradient(
+    180deg,
+    #1F3D2E 0%,
+    #6D5619 100%
+  );
+
+  --color-charcoal:       #FFFFFF;
+  --color-bronze-light:   #FFFFFF;
+  --rgb-fg:               255,255,255;
+  --rgb-cream:            255,255,255;
+}
+
+/* Lightbox */
+html[data-theme="8"] .lightbox{
+  --color-ivory: #FFFFFF;
+  --rgb-cream:   255,255,255;
+}
 
