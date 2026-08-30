@@ -14,11 +14,11 @@
      ======================================================== */
 
   const soundFiles = {
-    ge: "sounds/tabla-bass-deep.wav",
-    ke: "sounds/tabla-bass-short.wav",
-    tin: "sounds/tabla-high-ring.wav",
-    na: "sounds/tabla-high-sharp.wav"
-  };
+  ge: "Sounds/tabla-bass-deep.wav",
+  ke: "Sounds/tabla-bass-short.wav",
+  tin: "Sounds/tabla-high-ring.wav",
+  na: "Sounds/tabla-high-sharp.wav"
+};
 
 
   /*
