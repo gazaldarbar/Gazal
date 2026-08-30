@@ -113,6 +113,23 @@ a:focus-visible, button:focus-visible, iframe:focus-visible{
 @media (hover:hover){ .cursor-glow{ opacity:1; } }
 
 /* ===========================================================
+   INTRO SCRATCH-REVEAL
+   =========================================================== */
+html.intro-loading{ overflow:hidden; }
+html.intro-loading .reveal-hero > *,
+html.intro-loading .hero-title{
+  animation-play-state: paused;
+}
+.intro-overlay{
+  position:fixed; inset:0; z-index:99999;
+  pointer-events:none;
+}
+#introSvg{ width:100%; height:100%; display:block; }
+@media (prefers-reduced-motion: reduce){
+  .intro-overlay{ display:none; }
+}
+
+/* ===========================================================
    Utility
    =========================================================== */
 .section-inner{ max-width:var(--container); margin:0 auto; padding:0 6vw; }
