@@ -148,3 +148,74 @@
 .page-transition-overlay.active{
   opacity:1; visibility:visible; backdrop-filter:blur(6px);
   }
+
+/* ==========================================================
+   HERO SCROLL EXIT — EXPERIMENT
+   Inspired by cinematic scroll storytelling.
+   Remove this entire block to reverse.
+   ========================================================== */
+
+@supports (animation-timeline: view()) {
+
+  .hero-content{
+    animation:
+      hero-scroll-exit 1s linear both;
+    animation-timeline: view();
+    animation-range: exit 0% exit 85%;
+  }
+
+  .hero-dancer{
+    animation:
+      hero-dancer-scroll-depth 1s linear both;
+    animation-timeline: view();
+    animation-range: exit 0% exit 100%;
+  }
+
+  .hero-texture{
+    animation:
+      hero-texture-scroll-depth 1s linear both;
+    animation-timeline: view();
+    animation-range: exit 0% exit 100%;
+  }
+
+}
+
+@keyframes hero-scroll-exit{
+  from{
+    opacity:1;
+    transform:translateY(0);
+    filter:blur(0);
+  }
+
+  to{
+    opacity:0;
+    transform:translateY(-12vh);
+    filter:blur(8px);
+  }
+}
+
+@keyframes hero-dancer-scroll-depth{
+  from{
+    transform:scale(1);
+  }
+
+  to{
+    transform:scale(1.08);
+  }
+}
+
+@keyframes hero-texture-scroll-depth{
+  from{
+    opacity:1;
+    transform:scale(1);
+  }
+
+  to{
+    opacity:.3;
+    transform:scale(1.05);
+  }
+}
+
+/* ==========================================================
+   HERO SCROLL EXIT — END EXPERIMENT
+   ========================================================== */
