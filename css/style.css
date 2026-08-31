@@ -1875,3 +1875,29 @@ html[data-theme="8"] .lightbox{
   .string-6{ top:55%; }
 
 }
+
+/* ==========================================================
+   INTERACTIVE EQUIPMENT — SHOW EQUIPMENT ONLY
+   Piano + Tabla + Guitar
+   ========================================================== */
+
+/* Hide headings / subtitles / instructions */
+.interactive-piano .eyebrow,
+.interactive-piano .section-title,
+.interactive-piano .section-subtitle,
+.interactive-piano .piano-subtitle,
+.interactive-piano .piano-hint,
+
+.interactive-tabla .eyebrow,
+.interactive-tabla .section-title,
+.interactive-tabla .section-subtitle,
+.interactive-tabla .tabla-subtitle,
+.interactive-tabla .tabla-hint,
+
+.interactive-guitar .eyebrow,
+.interactive-guitar .section-title,
+.interactive-guitar .section-subtitle,
+.interactive-guitar .guitar-subtitle,
+.interactive-guitar .guitar-hint {
+  display: none !important;
+}
