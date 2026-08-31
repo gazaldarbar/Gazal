@@ -1730,3 +1730,148 @@ html[data-theme="8"] .lightbox{
   --rgb-cream:   255,255,255;
 }
 
+/* ==========================================================
+   INTERACTIVE GUITAR
+   ========================================================== */
+
+.interactive-guitar{
+  position:relative;
+  overflow:hidden;
+  padding:clamp(70px, 9vw, 110px) 0;
+}
+
+.guitar-subtitle{
+  text-align:center;
+  max-width:620px;
+  margin:18px auto 35px;
+  line-height:1.7;
+  opacity:.75;
+}
+
+.guitar-stage{
+  position:relative;
+  width:min(94vw, 1100px);
+  margin:0 auto;
+  line-height:0;
+  user-select:none;
+  -webkit-user-select:none;
+  -webkit-tap-highlight-color:transparent;
+  touch-action:none;
+}
+
+.guitar-image{
+  display:block;
+  position:relative;
+  z-index:1;
+
+  width:100%;
+  height:auto;
+
+  pointer-events:none;
+  user-select:none;
+  -webkit-user-drag:none;
+}
+
+
+/* ==========================================================
+   SIX STRING HIT AREAS
+   ========================================================== */
+
+.guitar-string{
+  position:absolute;
+
+  left:27%;
+  width:60%;
+  height:4.8%;
+
+  margin:0;
+  padding:0;
+
+  border:0;
+  border-radius:999px;
+
+  background:transparent;
+
+  cursor:pointer;
+
+  z-index:10;
+
+  appearance:none;
+  -webkit-appearance:none;
+
+  touch-action:none;
+  -webkit-tap-highlight-color:transparent;
+}
+
+
+/* Desktop string positions
+   Top → Bottom:
+   High E
+   B
+   G
+   D
+   A
+   Low E
+*/
+
+.string-1{ top:38%; }
+.string-2{ top:41.3%; }
+.string-3{ top:44.6%; }
+.string-4{ top:47.9%; }
+.string-5{ top:51.2%; }
+.string-6{ top:54.5%; }
+
+
+/* ==========================================================
+   TEMPORARY PRESS FEEDBACK
+   ========================================================== */
+
+.guitar-string.is-playing{
+  background:rgba(255,255,255,.12);
+  box-shadow:
+    0 0 10px rgba(255,255,255,.18);
+
+  transform:scaleY(1.8);
+}
+
+
+/* ==========================================================
+   HINT
+   ========================================================== */
+
+.guitar-hint{
+  text-align:center;
+  margin:22px 0 0;
+  font-size:.9rem;
+  opacity:.65;
+}
+
+
+/* ==========================================================
+   MOBILE
+   ========================================================== */
+
+@media(max-width:700px){
+
+  .interactive-guitar{
+    padding:65px 0;
+  }
+
+  .guitar-stage{
+    width:100%;
+  }
+
+  .guitar-string{
+    left:24%;
+    width:66%;
+    height:6.5%;
+  }
+
+  .string-1{ top:37.5%; }
+  .string-2{ top:41%; }
+  .string-3{ top:44.5%; }
+  .string-4{ top:48%; }
+  .string-5{ top:51.5%; }
+  .string-6{ top:55%; }
+
+}
