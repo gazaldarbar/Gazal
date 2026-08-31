@@ -209,6 +209,12 @@
     margin-right: auto;
   }
 
+     .tabla-player{
+    width:100%;
+    margin-left:auto;
+    margin-right:auto;
+     }
+
   /* More balanced section rhythm */
   section{
     scroll-margin-top: 80px;
