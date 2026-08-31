@@ -827,3 +827,32 @@
   }
 
 }
+
+/* ==========================================================
+   STEP 4B — MOBILE PERFORMANCE POLISH
+   Reduce expensive atmospheric effects on small screens
+   ========================================================== */
+
+@media (max-width:600px){
+
+  /* Reduce the cost of the animated grain */
+  .atmosphere::before{
+    animation:none;
+  }
+
+  /* Keep the atmosphere, but stop continuous particle animation */
+  .atmosphere span{
+    animation:none;
+    opacity:.28;
+  }
+
+  /* Avoid expensive blur during mobile text reveals */
+  .reveal-word{
+    filter:none;
+  }
+
+  .reveal-word.in-view{
+    filter:none;
+  }
+
+}
