@@ -600,7 +600,7 @@
 .tabla-player{
   position:relative;
   width:min(92vw, 680px);
-  margin:0 auto;
+  margin:45px auto 0;
   line-height:0;
   user-select:none;
   -webkit-tap-highlight-color:transparent;
@@ -714,6 +714,7 @@
 
   .tabla-player{
     width:94vw;
+    margin-top:35px;
   }
 
   .tabla-intro{
@@ -725,13 +726,4 @@
 
 }
 
-/* Tabla spacing after removing subtitle */
-.tabla-stage{
-  margin-top:45px;
-}
 
-@media (max-width:700px){
-  .tabla-stage{
-    margin-top:35px;
-  }
-}
