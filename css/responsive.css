@@ -277,5 +277,21 @@
   .gallery{
     overflow:hidden;
   }
+   /* Course card mobile breathing room */
+.course-card{
+  padding:22px 20px;
+}
+
+.course-card h3{
+  margin-bottom:10px;
+}
+
+.course-card p{
+  line-height:1.65;
+}
+
+.course-arrow{
+  margin-top:14px;
+}
 
 }
