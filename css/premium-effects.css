@@ -798,3 +798,26 @@
   user-select:none;
   touch-action:manipulation;
 }
+/* ==========================================================
+   COURSE CARD — SMOOTH MOBILE PRESS
+   ========================================================== */
+
+.course-card{
+  -webkit-tap-highlight-color:transparent;
+  transition:
+    transform .22s ease,
+    box-shadow .22s ease;
+}
+
+/* Remove browser focus/active visual */
+.course-card:focus,
+.course-card:focus-visible,
+.course-card:active{
+  outline:none;
+  -webkit-tap-highlight-color:transparent;
+}
+
+/* Smooth touch feedback */
+.course-card:active{
+  transform:scale(.985);
+}
