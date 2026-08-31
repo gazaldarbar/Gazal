@@ -262,20 +262,59 @@ if(slider && sliderProgress && sliderHandle){
     if(e.key === "ArrowLeft") showPrev();
   });
 
-  // Swipe support (left = next, right = previous)
-  var touchStartX = null;
-  var stage = modal.querySelector(".folder-modal-stage");
-  stage.addEventListener("touchstart", function(e){
-    touchStartX = e.changedTouches[0].clientX;
-  }, { passive: true });
-  stage.addEventListener("touchend", function(e){
-    if(touchStartX === null) return;
-    var dx = e.changedTouches[0].clientX - touchStartX;
-    if(Math.abs(dx) > 40){
-      if(dx < 0) showNext(); else showPrev();
-    }
-    touchStartX = null;
-  }, { passive: true });
+  /* ===========================================================
+   MOBILE GALLERY SWIPE
+   Left  = next image
+   Right = previous image
+   =========================================================== */
+
+var touchStartX = null;
+var touchStartY = null;
+var stage = modal.querySelector(".folder-modal-stage");
+
+stage.addEventListener("touchstart", function(e){
+
+  if(e.touches.length !== 1) return;
+
+  touchStartX = e.touches[0].clientX;
+  touchStartY = e.touches[0].clientY;
+
+}, { passive: true });
+
+
+stage.addEventListener("touchend", function(e){
+
+  if(touchStartX === null || touchStartY === null) return;
+
+  var touch = e.changedTouches[0];
+
+  var dx = touch.clientX - touchStartX;
+  var dy = touch.clientY - touchStartY;
+
+  var absX = Math.abs(dx);
+  var absY = Math.abs(dy);
+
+  /* Reset immediately */
+  touchStartX = null;
+  touchStartY = null;
+
+  /*
+    Only treat the gesture as a gallery swipe when
+    horizontal movement is clearly greater than vertical.
+    This prevents normal page-like gestures from changing
+    the image accidentally.
+  */
+
+  if(absX < 50) return;
+  if(absX <= absY * 1.25) return;
+
+  if(dx < 0){
+    showNext();
+  }else{
+    showPrev();
+  }
+
+}, { passive: true });
 
 /* ===========================================================
    PREMIUM GALLERY SLIDER — DRAG / TAP
