@@ -320,3 +320,21 @@
   }
 
 }
+
+/* ==========================================================
+   GALLERY — MOBILE SPACING POLISH
+   Step 3E
+   ========================================================== */
+
+@media (max-width:600px){
+
+  .folder-grid{
+    gap:1.2rem .8rem;
+    margin-top:1.6rem;
+  }
+
+  .story-stack{
+    margin-bottom:.6rem;
+  }
+
+}
