@@ -856,3 +856,43 @@
   }
 
 }
+
+/* ==========================================================
+   STEP 4C — MOBILE REVEAL OPTIMIZATION
+   Keep the animation, reduce expensive rendering
+   ========================================================== */
+
+@media (max-width:600px){
+
+  /* Lightweight text reveal */
+  .reveal-word{
+    filter:none;
+    transform:translateY(10px);
+    opacity:0;
+    transition:
+      opacity .5s ease,
+      transform .5s ease;
+  }
+
+  .reveal-word.in-view{
+    filter:none;
+    transform:translateY(0);
+    opacity:1;
+  }
+
+  /* Lightweight gallery reveal */
+  .masonry-item{
+    clip-path:none;
+    transform:translateY(10px);
+    opacity:0;
+    transition:
+      transform .6s ease,
+      opacity .6s ease;
+  }
+
+  .masonry-item.in-view{
+    transform:translateY(0);
+    opacity:1;
+  }
+
+}
