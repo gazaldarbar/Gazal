@@ -338,3 +338,22 @@
   }
 
 }
+
+/* ==========================================================
+   GALLERY FOLDER — MOBILE TOUCH POLISH
+   ========================================================== */
+
+.story-card{
+  -webkit-tap-highlight-color:transparent;
+  -webkit-touch-callout:none;
+  -webkit-user-select:none;
+  user-select:none;
+  touch-action:manipulation;
+}
+
+.story-card:focus,
+.story-card:focus-visible,
+.story-card:active{
+  outline:none;
+  -webkit-tap-highlight-color:transparent;
+}
