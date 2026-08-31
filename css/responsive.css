@@ -248,3 +248,34 @@
   }
 
 }
+
+/* ==========================================================
+   MOBILE VISUAL FLOW — STEP 3B
+   ========================================================== */
+
+@media (max-width:600px){
+
+  /* Keep headings from feeling too close to the next content */
+  .section-title{
+    line-height:1.15;
+    margin-bottom:18px;
+  }
+
+  /* Give section subtitles comfortable breathing room */
+  .section-subtitle{
+    line-height:1.6;
+    margin-bottom:30px;
+  }
+
+  /* Keep course cards visually separated */
+  .course-grid{
+    row-gap:18px;
+  }
+
+  /* Prevent images from touching the screen edges */
+  .about-image-frame,
+  .gallery{
+    overflow:hidden;
+  }
+
+}
