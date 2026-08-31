@@ -391,5 +391,27 @@
     transform: scale(.97);
     opacity: .75;
   }
+/* Remove mobile tap highlight from menu button */
+.nav-toggle,
+.menu-toggle,
+.mobile-menu-toggle{
+  -webkit-tap-highlight-color:transparent;
+  -webkit-touch-callout:none;
+  -webkit-user-select:none;
+  user-select:none;
+  outline:none;
+}
 
+.nav-toggle:focus,
+.nav-toggle:focus-visible,
+.nav-toggle:active,
+.menu-toggle:focus,
+.menu-toggle:focus-visible,
+.menu-toggle:active,
+.mobile-menu-toggle:focus,
+.mobile-menu-toggle:focus-visible,
+.mobile-menu-toggle:active{
+  outline:none;
+  -webkit-tap-highlight-color:transparent;
+}
 }
