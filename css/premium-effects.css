@@ -726,4 +726,60 @@
 
 }
 
+/* ==========================================================
+   MOBILE TOUCH POLISH
+   Step 1 — Touch interactions
+   ========================================================== */
 
+/* Prevent accidental text selection on interactive equipment */
+#academyPiano,
+.tabla-player,
+#guitar,
+.guitar-stage{
+  -webkit-user-select:none;
+  user-select:none;
+  -webkit-touch-callout:none;
+}
+
+
+/* Remove the grey tap flash on Android/iOS */
+#academyPiano button,
+.tabla-zone,
+.guitar-string{
+  -webkit-tap-highlight-color:transparent;
+}
+
+
+/* Make taps feel immediate */
+#academyPiano button,
+.tabla-zone,
+.guitar-string{
+  touch-action:manipulation;
+}
+
+
+/* Slightly clearer physical press feedback */
+#academyPiano button:active{
+  transform:translateY(2px);
+}
+
+.tabla-zone:active{
+  transform:scale(.96);
+}
+
+.guitar-string:active{
+  transform:scaleY(1.5);
+}
+
+
+/* Respect users who prefer reduced motion */
+@media (prefers-reduced-motion: reduce){
+
+  #academyPiano button,
+  .tabla-zone,
+  .guitar-string{
+    transition:none !important;
+    animation:none !important;
+  }
+
+}
