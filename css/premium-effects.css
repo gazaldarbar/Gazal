@@ -721,11 +721,17 @@
     margin-bottom:28px;
   }
 
-
-
-
-
+}
 
 }
 
+/* Tabla spacing after removing subtitle */
+.tabla-stage{
+  margin-top:45px;
+}
+
+@media (max-width:700px){
+  .tabla-stage{
+    margin-top:35px;
+  }
 }
