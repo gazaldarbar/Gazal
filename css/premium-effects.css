@@ -896,3 +896,14 @@
   }
 
 }
+
+/* ==========================================================
+   MOBILE LCP PERFORMANCE — HERO DANCER
+   ========================================================== */
+
+@media (max-width:600px){
+  .hero-dancer{
+    animation:none !important;
+    animation-timeline:none !important;
+  }
+}
