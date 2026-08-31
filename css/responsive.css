@@ -358,33 +358,38 @@
   -webkit-tap-highlight-color:transparent;
 }
 
+
 /* ==========================================================
-   MOBILE NAVIGATION — TOUCH POLISH
-   Step 3F
+   MOBILE NAVIGATION — REMOVE TOUCH HIGHLIGHT
    ========================================================== */
 
 @media (max-width:600px){
 
-  .main-nav a{
-    -webkit-tap-highlight-color:transparent;
-    -webkit-touch-callout:none;
-    -webkit-user-select:none;
-    user-select:none;
-    touch-action:manipulation;
+  .main-nav,
+  .main-nav *,
+  .main-nav a,
+  .main-nav button{
+    -webkit-tap-highlight-color: transparent;
+    -webkit-touch-callout: none;
+  }
 
-    transition:
-      opacity .18s ease,
-      transform .18s ease;
+  .main-nav a{
+    -webkit-user-select: none;
+    user-select: none;
+    touch-action: manipulation;
+    outline: none;
   }
 
   .main-nav a:focus,
-  .main-nav a:focus-visible{
-    outline:none;
+  .main-nav a:focus-visible,
+  .main-nav a:active{
+    outline: none;
+    -webkit-tap-highlight-color: transparent;
   }
 
   .main-nav a:active{
-    transform:scale(.97);
-    opacity:.75;
+    transform: scale(.97);
+    opacity: .75;
   }
 
 }
