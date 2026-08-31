@@ -357,3 +357,34 @@
   outline:none;
   -webkit-tap-highlight-color:transparent;
 }
+
+/* ==========================================================
+   MOBILE NAVIGATION — TOUCH POLISH
+   Step 3F
+   ========================================================== */
+
+@media (max-width:600px){
+
+  .main-nav a{
+    -webkit-tap-highlight-color:transparent;
+    -webkit-touch-callout:none;
+    -webkit-user-select:none;
+    user-select:none;
+    touch-action:manipulation;
+
+    transition:
+      opacity .18s ease,
+      transform .18s ease;
+  }
+
+  .main-nav a:focus,
+  .main-nav a:focus-visible{
+    outline:none;
+  }
+
+  .main-nav a:active{
+    transform:scale(.97);
+    opacity:.75;
+  }
+
+}
