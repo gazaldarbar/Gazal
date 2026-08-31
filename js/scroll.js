@@ -8,7 +8,7 @@
   var backToTop = document.getElementById('backToTop');
   var heroRings = document.querySelector('.hero-rings');
   var hero = document.querySelector('.hero');
-  var heroHeight = hero ? hero.offsetHeight : 0;
+  
 
   function onScroll() {
     var y = window.scrollY || window.pageYOffset;
@@ -27,6 +27,7 @@
 
     // Subtle parallax on hero decorative rings
     if (heroRings && hero) {
+       var heroHeight = hero.offsetHeight;
       if (y < heroHeight) {
         var offset = y * 0.18;
         heroRings.style.transform = 'translate(-50%, calc(-50% + ' + offset + 'px))';
