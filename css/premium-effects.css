@@ -907,3 +907,13 @@
     animation-timeline:none !important;
   }
 }
+
+/* ==========================================================
+   ACCESSIBILITY — INTERACTIVE INSTRUMENT HINTS
+   ========================================================== */
+
+.tabla-hint,
+.guitar-hint{
+  color:var(--color-ink);
+  opacity:1;
+}
