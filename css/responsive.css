@@ -194,3 +194,51 @@
     font-size:.58rem;
   }
 }
+
+/* ==========================================================
+   MOBILE-FIRST POLISH
+   Step 3 — Spacing & visual flow
+   ========================================================== */
+
+@media (max-width: 600px){
+
+  /* Keep content comfortably away from screen edges */
+  .section-inner{
+    width: min(92%, 680px);
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  /* More balanced section rhythm */
+  section{
+    scroll-margin-top: 80px;
+  }
+
+  /* Section headings */
+  .section-title{
+    margin-bottom: 16px;
+  }
+
+  .section-subtitle{
+    margin-top: 0;
+    margin-bottom: 28px;
+  }
+
+  /* Prevent long text from feeling cramped */
+  .lead-text{
+    line-height: 1.7;
+  }
+
+  /* Course grid breathing room */
+  .course-grid{
+    gap: 16px;
+  }
+
+  /* Interactive equipment spacing */
+  .interactive-tabla-section,
+  .interactive-guitar{
+    padding-top: 65px;
+    padding-bottom: 65px;
+  }
+
+}
