@@ -295,3 +295,28 @@
 }
 
 }
+
+/* ==========================================================
+   WHY US — MOBILE SCROLL POLISH
+   Step 3D
+   ========================================================== */
+
+@media (max-width:600px){
+
+  .why-grid{
+    gap:1rem;
+    margin-top:2rem;
+    padding-bottom:.8rem;
+
+    scroll-padding-left:6.5vw;
+    scroll-padding-right:6.5vw;
+
+    overscroll-behavior-x:contain;
+  }
+
+  .why-card{
+    flex:0 0 84%;
+    scroll-snap-align:center;
+  }
+
+}
