@@ -1,5 +1,6 @@
 /* ==========================================================
-   INTERACTIVE GUITAR — REAL SAMPLED SOUNDS
+   INTERACTIVE GUITAR
+   REAL SAMPLED STRING SOUNDS
    ========================================================== */
 
 (function(){
@@ -9,7 +10,11 @@
   if(!guitar) return;
 
 
-  const soundFiles = {
+  /* ========================================================
+     REAL GUITAR SAMPLES
+     ======================================================== */
+
+  const guitarSounds = {
 
     "low-e": "Sounds/guitar-low-e.wav",
     "a":     "Sounds/guitar-a.wav",
@@ -21,47 +26,80 @@
   };
 
 
+  /* ========================================================
+     PLAY A STRING
+     ======================================================== */
+
   function playString(soundName){
 
-    const src = soundFiles[soundName];
+    const file = guitarSounds[soundName];
 
-    if(!src) return;
+    if(!file){
+      console.warn("Guitar sound not found:", soundName);
+      return;
+    }
 
     /*
-      A new Audio object allows overlapping notes,
-      making repeated guitar plucks feel natural.
+      Create a new audio object for every strike.
+      This allows fast repeated notes to overlap naturally.
     */
 
-    const audio = new Audio(src);
+    const audio = new Audio(file);
 
-    audio.volume = 0.9;
     audio.preload = "auto";
+    audio.volume = 0.9;
 
-    audio.play().catch(function(error){
-      console.log("Guitar sound could not play:", error);
-    });
+    const promise = audio.play();
+
+    if(promise){
+      promise.catch(function(error){
+        console.warn(
+          "Guitar audio could not play:",
+          error
+        );
+      });
+    }
 
   }
 
 
-  guitar.addEventListener("pointerdown", function(event){
+  /* ========================================================
+     STRING INTERACTION
+     ======================================================== */
 
-    const string = event.target.closest(".guitar-string");
+  const strings = guitar.querySelectorAll(".guitar-string");
 
-    if(!string) return;
+  strings.forEach(function(string){
 
-    event.preventDefault();
+    string.addEventListener("pointerdown", function(event){
 
-    const soundName = string.dataset.sound;
+      event.preventDefault();
+      event.stopPropagation();
 
-    playString(soundName);
+      const soundName = string.dataset.sound;
 
-    string.classList.add("is-playing");
+      playString(soundName);
 
-    setTimeout(function(){
       string.classList.remove("is-playing");
-    }, 350);
+
+      /*
+        Force browser to restart the animation
+        when the same string is tapped repeatedly.
+      */
+
+      void string.offsetWidth;
+
+      string.classList.add("is-playing");
+
+      setTimeout(function(){
+
+        string.classList.remove("is-playing");
+
+      }, 180);
+
+    });
 
   });
+
 
 })();
