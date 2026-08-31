@@ -817,3 +817,13 @@
   -webkit-user-select:none;
 }
 
+/* Fix Tabla mobile centering */
+@media (max-width:600px){
+
+  .interactive-tabla-section .tabla-player{
+    width:100%;
+    margin-left:auto;
+    margin-right:auto;
+  }
+
+}
