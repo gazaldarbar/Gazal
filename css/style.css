@@ -209,8 +209,17 @@ section:nth-of-type(even){ background:var(--color-bg-soft); }
   max-width:var(--container); margin:0 auto; padding:0 6vw;
   display:flex; align-items:center; justify-content:space-between; gap:1.5rem;
 }
-.brand{ display:flex; align-items:center; gap:.75rem; }
-.brand-mark{ width:42px; height:42px; object-fit:contain; border-radius:6px; }
+.brand{
+  display:flex;
+  align-items:center;
+}
+
+.brand-mark{
+  width:78px;
+  height:58px;
+  object-fit:contain;
+  border-radius:0;
+}
 .brand-text{ display:flex; flex-direction:column; line-height:1.1; }
 .brand-name{ font-family:var(--font-display); font-weight:700; font-size:1.28rem; color:var(--color-charcoal); letter-spacing:.02em; }
 .brand-sub{ font-size:.62rem; letter-spacing:.18em; text-transform:uppercase; color:var(--color-bronze-deep); }
@@ -277,8 +286,12 @@ section:nth-of-type(even){ background:var(--color-bg-soft); }
 
 .hero-content{ position:relative; z-index:2; padding:0 6vw; max-width:900px; }
 .hero-logo{
-  width:180px; height:180px; object-fit:contain; margin:0 auto 1.6rem;
-  border-radius:14px;
+  width:clamp(260px, 32vw, 460px);
+  height:auto;
+  max-width:82vw;
+  object-fit:contain;
+  margin:0 auto 1.6rem;
+  border-radius:0;
   filter:none;
 }
 .hero-title{
