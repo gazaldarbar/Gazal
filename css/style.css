@@ -219,7 +219,8 @@ section:nth-of-type(even){ background:var(--color-bg-soft); }
   height:87px;
   object-fit:contain;
   border-radius:0;
-  transform:translateX(8px);
+  transform:translateX(8px) scale(1.35);
+  transform-origin:left center;
 }
 .brand-text{ display:flex; flex-direction:column; line-height:1.1; }
 .brand-name{ font-family:var(--font-display); font-weight:700; font-size:1.28rem; color:var(--color-charcoal); letter-spacing:.02em; }
