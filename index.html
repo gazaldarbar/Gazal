@@ -2,14 +2,22 @@
 <!-- COLOUR THEME SWITCH:change data-theme below to 1, 2, 3, or 4 and commit — every section on the page updates together. -->
 <html lang="en" data-theme="8">
 <head>
-      <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-EKOLT66L8S"></script>
+      <!-- Google tag (gtag.js) - deferred for performance -->
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
 
+  gtag('js', new Date());
   gtag('config', 'G-EKOLT66L8S');
+
+  window.addEventListener('load', function(){
+    setTimeout(function(){
+      var script = document.createElement('script');
+      script.async = true;
+      script.src = 'https://www.googletagmanager.com/gtag/js?id=G-EKOLT66L8S';
+      document.head.appendChild(script);
+    }, 2000);
+  });
 </script>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
