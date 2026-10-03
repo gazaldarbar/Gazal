@@ -852,5 +852,23 @@
 
   </div>
 </div>
+<script>
+document.addEventListener('click', function (e) {
+  var a = e.target.closest && e.target.closest('a[href]');
+  if (!a || typeof gtag !== 'function') return;
+  var href = a.getAttribute('href') || '';
+  var name = null;
+  if (href.indexOf('tel:') === 0) name = 'call_click';
+  else if (href.indexOf('wa.me') > -1 || href.indexOf('api.whatsapp.com') > -1) name = 'whatsapp_click';
+  else if (href.indexOf('mailto:') === 0) name = 'email_click';
+  if (!name) return;
+  var sec = a.closest('section, header, footer');
+  gtag('event', name, {
+    link_url: href,
+    link_location: sec ? (sec.id || sec.tagName.toLowerCase()) : 'page',
+    transport_type: 'beacon'
+  });
+}, true);
+</script>
 </body>
 </html>
