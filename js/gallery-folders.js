@@ -39,7 +39,7 @@ var galleryData = {
       alt: "Traditional tabla training bols and laya classes at Gazal Darbar Music and Dance Academy Chelari"
     },
     {
-      src: "images/gallery/classes/gazal-darbar-bamboo-flute-bansuri-classes-thazhe-chelari.webp",
+      src: "images/gallery/classes/gazal-darbar-bamboo-flute-bansuri-classes-chelari.webp",
       caption: "Flute Classes",
       alt: "Classical Indian bamboo flute bansuri lessons at Gazal Darbar Music and Dance Academy Thazhe Chelari"
     },
