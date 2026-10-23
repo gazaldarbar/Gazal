@@ -16,22 +16,110 @@ var galleryData = {
     ]
   },
   classes: {
-    label: "Classes",
-    images: [
-      { src:"images/gallery/classes/guitar-class-gazal-darbar.jpg",
-        date:"2024-06-01", caption:"Guitar Session",
-        alt:"Student practising guitar during a one-on-one class at Gazal Darbar" },
-      { src:"images/gallery/classes/classical-vocal-training-gazal-darbar.jpg",
-        date:"2024-05-01", caption:"Classical Vocal Training",
-        alt:"Carnatic vocal training session in progress at Gazal Darbar" },
-      { src:"images/gallery/classes/keyboard-class-gazal-darbar.jpg",
-        date:"2024-04-01", caption:"Keyboard Classroom",
-        alt:"Students learning keyboard together in a classroom at Gazal Darbar" },
-      { src:"images/gallery/classes/tabla-practice-gazal-darbar.jpg",
-        date:"2024-03-01", caption:"Tabla Practice",
-        alt:"Student practising tabla during a percussion class at Gazal Darbar" }
-    ]
-  },
+  label: "Classes",
+  images: [
+    {
+      src: "images/gallery/classes/gazal-darbar-guitar-classes-thazhe-chelari-malappuram.webp",
+      caption: "Guitar Classes",
+      alt: "Acoustic and electric guitar classes at Gazal Darbar Music and Dance Academy Thazhe Chelari Malappuram"
+    },
+    {
+      src: "images/gallery/classes/gazal-darbar-carnatic-violin-classes-thazhe-chelari.webp",
+      caption: "Violin Classes",
+      alt: "Carnatic and Western violin training at Gazal Darbar Music and Dance Academy Chelari"
+    },
+    {
+      src: "images/gallery/classes/gazal-darbar-keyboard-piano-classes-thazhe-chelari.webp",
+      caption: "Keyboard Classes",
+      alt: "Electronic keyboard and piano lessons at Gazal Darbar Music and Dance Academy Thazhe Chelari"
+    },
+    {
+      src: "images/gallery/classes/gazal-darbar-tabla-classes-thazhe-chelari-malappuram.webp",
+      caption: "Tabla Classes",
+      alt: "Traditional tabla training bols and laya classes at Gazal Darbar Music and Dance Academy Chelari"
+    },
+    {
+      src: "images/gallery/classes/gazal-darbar-bamboo-flute-bansuri-classes-thazhe-chelari.webp",
+      caption: "Flute Classes",
+      alt: "Classical Indian bamboo flute bansuri lessons at Gazal Darbar Music and Dance Academy Thazhe Chelari"
+    },
+    {
+      src: "images/gallery/classes/gazal-darbar-harmonium-classes-thazhe-chelari.webp",
+      caption: "Harmonium Classes",
+      alt: "Traditional harmonium accompaniment and vocal support training at Gazal Darbar Chelari"
+    },
+    {
+      src: "images/gallery/classes/gazal-darbar-cinematic-dance-classes-thazhe-chelari.webp",
+      caption: "Cinematic Dance Classes",
+      alt: "High energy cinematic and western movie dance classes for kids at Gazal Darbar Thazhe Chelari"
+    },
+    {
+      src: "images/gallery/classes/gazal-darbar-zumba-fitness-dance-classes-thazhe-chelari.webp",
+      caption: "Zumba Classes",
+      alt: "Cardio fitness and Zumba workout dance sessions at Gazal Darbar Music and Dance Academy Chelari"
+    },
+    {
+      src: "images/gallery/classes/gazal-darbar-bharatanatyam-classical-dance-thazhe-chelari.webp",
+      caption: "Bharatanatyam Classes",
+      alt: "Authentic Bharatanatyam classical Indian dance training and mudras at Gazal Darbar Chelari"
+    },
+    {
+      src: "images/gallery/classes/gazal-darbar-mohiniyattam-dance-classes-thazhe-chelari.webp",
+      caption: "Mohiniyattam Classes",
+      alt: "Traditional Kerala Mohiniyattam classical dance training at Gazal Darbar Academy Thazhe Chelari"
+    },
+    {
+      src: "images/gallery/classes/gazal-darbar-kuchipudi-dance-classes-thazhe-chelari.webp",
+      caption: "Kuchipudi Classes",
+      alt: "Kuchipudi classical dance and Tarangam training at Gazal Darbar Academy Thazhe Chelari Malappuram"
+    },
+    {
+      src: "images/gallery/classes/gazal-darbar-ottan-thullal-classes-thazhe-chelari.webp",
+      caption: "Ottan Thullal Classes",
+      alt: "Traditional Kerala Ottan Thullal performing art and expression coaching at Gazal Darbar Chelari"
+    },
+    {
+      src: "images/gallery/classes/gazal-darbar-carnatic-music-vocal-classes-thazhe-chelari.webp",
+      caption: "Carnatic Music Classes",
+      alt: "Carnatic vocal music classes and swara sadhana at Gazal Darbar Academy Thazhe Chelari Malappuram"
+    },
+    {
+      src: "images/gallery/classes/gazal-darbar-hindustani-classical-vocal-classes-thazhe-chelari.webp",
+      caption: "Hindustani Music Classes",
+      alt: "Hindustani classical vocal training and raga riyaz at Gazal Darbar Music and Dance Academy Chelari"
+    },
+    {
+      src: "images/gallery/classes/gazal-darbar-mappilapattu-classes-thazhe-chelari-malappuram.webp",
+      caption: "Mappilapattu Classes",
+      alt: "Authentic Malabar Mappilapattu vocal training and traditional ishals at Gazal Darbar Chelari"
+    },
+    {
+      src: "images/gallery/classes/gazal-darbar-triple-drums-bongo-classes-thazhe-chelari.webp",
+      caption: "Triple Drums Classes",
+      alt: "Triple drums and acoustic bongo percussion training at Gazal Darbar Academy Thazhe Chelari"
+    },
+    {
+      src: "images/gallery/classes/gazal-darbar-kerala-nadanam-dance-classes-thazhe-chelari.webp",
+      caption: "Kerala Nadanam Classes",
+      alt: "Kerala Nadanam creative classical dance classes and stage coaching at Gazal Darbar Chelari"
+    },
+    {
+      src: "images/gallery/classes/gazal-darbar-drawing-painting-art-classes-thazhe-chelari.webp",
+      caption: "Drawing Classes",
+      alt: "Kids and beginners drawing sketching and watercolor painting classes at Gazal Darbar Chelari"
+    },
+    {
+      src: "images/gallery/classes/gazal-darbar-couple-dance-classes-thazhe-chelari.webp",
+      caption: "Couple Dance Classes",
+      alt: "Wedding and event couple dance choreography classes at Gazal Darbar Academy Thazhe Chelari"
+    },
+    {
+      src: "images/gallery/classes/gazal-darbar-personal-choreography-classes-thazhe-chelari.webp",
+      caption: "Personal Choreography Classes",
+      alt: "One-on-one personal dance choreography and stage competition preparation at Gazal Darbar Chelari"
+    }
+  ]
+},
   celebrations: {
     label: "Celebrations",
     images: []
