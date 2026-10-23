@@ -1,8 +1,91 @@
+
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
 
   <url>
     <loc>https://gazaldarbar.com/</loc>
+
+    <image:image>
+      <image:loc>https://gazaldarbar.com/images/gallery/classes/gazal-darbar-guitar-classes-thazhe-chelari-malappuram.webp</image:loc>
+    </image:image>
+
+    <image:image>
+      <image:loc>https://gazaldarbar.com/images/gallery/classes/gazal-darbar-carnatic-violin-classes-thazhe-chelari.webp</image:loc>
+    </image:image>
+
+    <image:image>
+      <image:loc>https://gazaldarbar.com/images/gallery/classes/gazal-darbar-keyboard-piano-classes-thazhe-chelari.webp</image:loc>
+    </image:image>
+
+    <image:image>
+      <image:loc>https://gazaldarbar.com/images/gallery/classes/gazal-darbar-tabla-classes-thazhe-chelari-malappuram.webp</image:loc>
+    </image:image>
+
+    <image:image>
+      <image:loc>https://gazaldarbar.com/images/gallery/classes/gazal-darbar-bamboo-flute-bansuri-classes-chelari.webp</image:loc>
+    </image:image>
+
+    <image:image>
+      <image:loc>https://gazaldarbar.com/images/gallery/classes/gazal-darbar-harmonium-classes-thazhe-chelari.webp</image:loc>
+    </image:image>
+
+    <image:image>
+      <image:loc>https://gazaldarbar.com/images/gallery/classes/gazal-darbar-cinematic-dance-classes-thazhe-chelari.webp</image:loc>
+    </image:image>
+
+    <image:image>
+      <image:loc>https://gazaldarbar.com/images/gallery/classes/gazal-darbar-zumba-fitness-dance-classes-thazhe-chelari.webp</image:loc>
+    </image:image>
+
+    <image:image>
+      <image:loc>https://gazaldarbar.com/images/gallery/classes/gazal-darbar-bharatanatyam-classical-dance-thazhe-chelari.webp</image:loc>
+    </image:image>
+
+    <image:image>
+      <image:loc>https://gazaldarbar.com/images/gallery/classes/gazal-darbar-mohiniyattam-dance-classes-thazhe-chelari.webp</image:loc>
+    </image:image>
+
+    <image:image>
+      <image:loc>https://gazaldarbar.com/images/gallery/classes/gazal-darbar-kuchipudi-dance-classes-thazhe-chelari.webp</image:loc>
+    </image:image>
+
+    <image:image>
+      <image:loc>https://gazaldarbar.com/images/gallery/classes/gazal-darbar-ottan-thullal-classes-thazhe-chelari.webp</image:loc>
+    </image:image>
+
+    <image:image>
+      <image:loc>https://gazaldarbar.com/images/gallery/classes/gazal-darbar-carnatic-music-vocal-classes-thazhe-chelari.webp</image:loc>
+    </image:image>
+
+    <image:image>
+      <image:loc>https://gazaldarbar.com/images/gallery/classes/gazal-darbar-hindustani-classical-vocal-classes-thazhe-chelari.webp</image:loc>
+    </image:image>
+
+    <image:image>
+      <image:loc>https://gazaldarbar.com/images/gallery/classes/gazal-darbar-mappilapattu-classes-thazhe-chelari-malappuram.webp</image:loc>
+    </image:image>
+
+    <image:image>
+      <image:loc>https://gazaldarbar.com/images/gallery/classes/gazal-darbar-triple-drums-bongo-classes-thazhe-chelari.webp</image:loc>
+    </image:image>
+
+    <image:image>
+      <image:loc>https://gazaldarbar.com/images/gallery/classes/gazal-darbar-kerala-nadanam-dance-classes-thazhe-chelari.webp</image:loc>
+    </image:image>
+
+    <image:image>
+      <image:loc>https://gazaldarbar.com/images/gallery/classes/gazal-darbar-drawing-painting-art-classes-thazhe-chelari.webp</image:loc>
+    </image:image>
+
+    <image:image>
+      <image:loc>https://gazaldarbar.com/images/gallery/classes/gazal-darbar-couple-dance-classes-thazhe-chelari.webp</image:loc>
+    </image:image>
+
+    <image:image>
+      <image:loc>https://gazaldarbar.com/images/gallery/classes/gazal-darbar-personal-choreography-classes-thazhe-chelari.webp</image:loc>
+    </image:image>
+
   </url>
 
 </urlset>
